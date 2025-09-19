@@ -945,12 +945,12 @@ body .window-table__item.selected:hover {
     margin-top: .46vh;
 }
 #app .hud-radmir-radar__map {
-    border-radius: 100%;
+    border-radius: 75%;
     border: 1.00vh solid #000000!important
 }
 
 body #app .hud-radmir-radar__map {
-    transition: .3s
+    transition: .8s
 }
 
 /* iconsize_white.css */
