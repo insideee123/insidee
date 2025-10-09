@@ -1776,7 +1776,7 @@ body #app .hud-radmir-speedometer-secondary__data-text {
         transform-origin: right bottom;
         position: absolute;
         right: 44;
-        top: 44px;
+        top: 444px;
       }
       .Old-Fixed-ZZ
        position:absolute;
