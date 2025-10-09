@@ -1777,7 +1777,7 @@ body #app .hud-radmir-speedometer-secondary__data-text {
         right: 0;
         top: 20px;
       }
-      .Old-Fixed-ZZ
+      .Old-Fixed-ZZ{
        position:
        width: 20.52vh;
        height: 8.2vh;;
@@ -1788,7 +1788,7 @@ body #app .hud-radmir-speedometer-secondary__data-text {
        width:6.5vh;
        height:4.5vh
       }
-      .Old-Fixed-Freeze {
+      .Old-Fixed-Freeze
         position: absolute;
         background: hsl(190deg 63% 66% / 40%);
         width: 20.1111vh;
@@ -2039,16 +2039,16 @@ ${bayokNewHudConfig.style.authorization}
     align-items: center;
 }
 
-.OLD-RADMIR-green-zone__image {
+.OLD-RADMIR-green-zone__image 
     margin-right: 10px;
 }
 
-.OLD-RADMIR-green-zone__text {
+.OLD-RADMIR-green-zone__text 
     color: #fff;
     text-shadow: 3px 3px 5px #00000080
 }
 
-.OLD-RADMIR-green-zone__text div:first-child {
+.OLD-RADMIR-green-zone__text div:first-child 
     font-size: 13px;
     font-weight: 900;
     text-transform: uppercase;
