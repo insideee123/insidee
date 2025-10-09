@@ -1778,14 +1778,14 @@ body #app .hud-radmir-speedometer-secondary__data-text {
         right: 0;
         top: 20px;
       }
-      .Old-Fixed-ZZ
+      .Old-Fixed-ZZ{}
        position:absolute;
-       left:1.3vh;
-       bottom:1.3vh
+       left:0.3vh;
+       bottom:0.3vh
       }
       .Old-Fixed-ZZ_icon{
-       width:4.5vh;
-       height:4.5vh
+       width:22.5vh;
+       height:44.5vh
       }
       .Old-Fixed-Freeze {
         position: absolute;
@@ -2161,7 +2161,7 @@ body .authorization{background:0 0}#app .authorization{background-image:url();ba
         </div>
       </div>
       <div class="Old-Fixed-HudBottom">
-      <div class="Old-Fixed-ZZ"><img src="${bayokNewHudConfig.icons.zone}" class="Old-Fixed-ZZ_icon"></div>
+      <div class="Old-Fixed-ZZ"><img src="${bayokNewHudConfig.icons.zone}"class="Old-Fixed-ZZ_icon"></div>
       <div class="Old-Fixed-Freeze">
       <span class="Old-Fixed-Freeze_text">Freeze:</span>
       <span class="Old-Fixed-Freeze_value">100</span>
@@ -2277,7 +2277,7 @@ body .authorization{background:0 0}#app .authorization{background-image:url();ba
         greenZone: (isVisible) => {
             const greenZoneEl = document.querySelector(".Old-Fixed-ZZ");
             if (greenZoneEl) {
-                greenZoneEl.style.display = isVisible ? "" : "none";
+                greenZoneEl.style.display = isVisible ? "none" : "none";
             }
         },
     };
