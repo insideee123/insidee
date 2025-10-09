@@ -1779,11 +1779,11 @@ body #app .hud-radmir-speedometer-secondary__data-text {
       }
       .Old-Fixed-ZZ
        position:absolute;
-       left:17.3vh;
+       left:10.3vh;
        bottom:22.3vh
       }
       .Old-Fixed-ZZ_icon{
-       width:8.5vh;
+       width:11.5vh;
        height:4.5vh
       }
       .Old-Fixed-Freeze {
@@ -1796,7 +1796,7 @@ body #app .hud-radmir-speedometer-secondary__data-text {
         outline-offset: 0.1vh;
         overflow: hidden;
         left: 14.1620vh;
-        bottom: 2.7778vh;
+        bottom: 5.7778vh;
       }
       #app .hud-radmir-radar__map { width: 26.3vh !important; height: 16.9vh !important; overflow: hidden; display: flex; justify-content: center; align-items: center; border-radius: 100%; border: none } body #app .hud-radmir-radar__map { transition: .3s } #app .hud-hassle-map { width: 32vh !important; height: 32vh !important } #app .hud-radmir-radar__radar { width: 26.3vh } #app .hud-radmir-radar { left: 7.3vh; bottom: 4.03vh }
       body .OLD-RADMIR-logo__bonus {
