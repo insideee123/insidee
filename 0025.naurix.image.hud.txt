@@ -938,8 +938,8 @@ body .window-table__item.selected:hover {
     margin-top: .46vh;
 }
 #app .hud-radmir-radar__map {
-    width: 26.3vh !important;
-    height: 16.9vh !important;
+    width: 25.3vh !important;
+    height: 15.9vh !important;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -959,7 +959,7 @@ body #app .hud-radmir-radar__map {
 
 #app .hud-radmir-radar__radar {
     width: 26.3vh;
-    border-radius: 2vh
+    border-radius: 1vh
 }
 
 #app .hud-radmir-radar {
@@ -1587,12 +1587,12 @@ body #app .hud-radmir-speedometer-secondary__data-text {
       }
       .Old-Fixed-Bonus{
        background: radial-gradient(93.1% 93.1% at 126.72% 6.9%, #000000ff 0, rgba(0, 0, 0, 1) 100%), linear-gradient(129.39deg, #000000ff 30.88%, #000000ff 98.06%);
-       width: 37px;
-       height: 37px;
+       width: 40px;
+       height: 40px;
        display: flex;
        align-items: center;
        justify-content: center;
-       font-size: 19px;
+       font-size: 20px;
        color: #fff;
        font-weight: 700;
        position: absolute;
