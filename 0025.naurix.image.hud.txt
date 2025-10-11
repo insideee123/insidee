@@ -480,17 +480,17 @@ body .window-table__item.selected:hover {
 }
 
 #app .player-interaction__inner {
-    background: #00000080;
-    border: .09vh solid #000000c2
+    background: #c7c7c7ff;
+    border: .09vh solid #c7c7c7ff
 }
 
 #app .player-interaction-layer {
-    background: rgb(0 0 0 / 80%);
+    background: rgb(199, 199, 199);
     border: none
 }
 
 #app .player-interaction__container {
-    background: rgb(0 0 0 / 80%);
+    background: rgb(199, 199, 199);
     border: none
 }
 
