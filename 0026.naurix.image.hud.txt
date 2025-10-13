@@ -2031,13 +2031,13 @@ ${bayokNewHudConfig.style.authorization}
     text-shadow: 3px 3px 5px #c7c7c7ff
 }
 
-.OLD-RADMIR-green-zone__text div:first-child {
+.OLD-RADMIR-green-zone__text div:first-child 
     font-size: 13px;
     font-weight: 300;
     text-transform: uppercase;
 }
 
-.OLD-RADMIR-green-zone__text div:last-child {
+.OLD-RADMIR-green-zone__text div:last-child 
     color: hsl(0deg 0% 100% / 70%);
     font-size: 12px;
     font-weight: 300;
