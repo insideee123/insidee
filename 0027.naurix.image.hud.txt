@@ -1571,18 +1571,18 @@ body .capture-table__timer {
        margin-bottom:3vh
       }
       .Old-Fixed-Logo img{
-       width:17.52vh;
-       height:5.2vh;
+       width:19.52vh;
+       height:6.2vh;
        margin-right:2vh
       }
       .Old-Fixed-Bonus{
        background: radial-gradient(93.1% 93.1% at 126.72% 6.9%, #000000ff 0, rgba(0, 0, 0, 1) 100%), linear-gradient(129.39deg, #000000ff 30.88%, #000000ff 98.06%);
-       width: 40px;
-       height: 40px;
+       width: 32px;
+       height: 32px;
        display: flex;
        align-items: center;
        justify-content: center;
-       font-size: 20px;
+       font-size: 16px;
        color: #fff;
        font-weight: 700;
        position: absolute;
@@ -1591,7 +1591,7 @@ body .capture-table__timer {
        border-radius: 50%;
        font-family:'GothamPro Bold Italic';
        font-weight:900;
-       font-size:1.3vh
+       font-size:1.4vh
       }
       .Old-Fixed-Main,.Old-Fixed-Cash,.Wanted_row{
        align-items:center;
@@ -1602,8 +1602,8 @@ body .capture-table__timer {
        margin-right:3.46vh
       }
       .Old-Fixed-Weapon{
-       width:18.6vh;
-       height:18.6vh;
+       width:16.6vh;
+       height:16.6vh;
        position:relative;
        display:flex;
        justify-content:flex-end;
@@ -1717,22 +1717,22 @@ body .capture-table__timer {
        margin-left: 3px
       }
       .Old-Fixed-Param.health .Old-Progress__Values{
-       background-color: #ffffffff;
+       background-color: #cf3e3e;
        box-shadow: #ffffffff 0 0 .46vh 0
       }
       .Old-Fixed-Param.armour .Old-Progress__Values{
-       background-color:#ffffffff;
+       background-color: #ffffffff;
        box-shadow: #ffffffff 0 0 .46vh 0
       }
       .Old-Fixed-Param.hunger .Old-Progress__Values{
-       width: 100%;
+       width: 50%;
        box-shadow: hsl(26deg 100% 59% / 30%) 0 0 5px 0;
        background-color: #ffffffff
       }
       .Old-Fixed-Param.breath .Old-Progress__Values{
         width: 99%;
         background-color: #fff;
-        box-shadow: rgba(255, 255, 255, 1) 0 0 5px 0
+        box-shadow: rgba(255, 255, 255, .5) 0 0 5px 0
       }
       .Old-Fixed-Param.health .old-param__icon{
        margin-left: 20px
@@ -1766,17 +1766,17 @@ body .capture-table__timer {
       .Old-Fixed-HudBottom{
         transform-origin: right bottom;
         position: absolute;
-        right: 0px;
-        top: 1012px;
+        right: 0;
+        top: 20px;
       }
       .Old-Fixed-ZZ{
        position:absolute;
-       left: 44.02vh;
-       bottom: 5.3vh
+       left:21.3vh;
+       bottom:21.3vh
       }
       .Old-Fixed-ZZ_icon{
-       width:5.5vh;
-       height:5.5vh
+       width:4.5vh;
+       height:4.5vh
       }
       .Old-Fixed-Freeze {
         position: absolute;
@@ -1792,7 +1792,7 @@ body .capture-table__timer {
       }
       #app .hud-radmir-radar__map { width: 26.3vh !important; height: 16.9vh !important; overflow: hidden; display: flex; justify-content: center; align-items: center; border-radius: 100%; border: none } body #app .hud-radmir-radar__map { transition: .3s } #app .hud-hassle-map { width: 32vh !important; height: 32vh !important } #app .hud-radmir-radar__radar { width: 26.3vh } #app .hud-radmir-radar { left: 7.3vh; bottom: 4.03vh }
       body .OLD-RADMIR-logo__bonus {
-    background: #ffffffff
+    background: #000000c5
 }
 ${bayokNewHudConfig.style.authorization}
 
@@ -1840,8 +1840,8 @@ ${bayokNewHudConfig.style.authorization}
 }
 
 .old-weapon {
-    width: 18.6vh;
-    height: 18.6vh;
+    width: 16.6vh;
+    height: 16.6vh;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -2018,41 +2018,41 @@ ${bayokNewHudConfig.style.authorization}
 
 #app .login-form__button_active {
     color: #141414 !important;
-    background: #5c4686 !important
+    background: #ffffff !important
 }
 
 .OLD-RADMIR-green-zone__main {
     position: absolute;
-    left: 1.6vh;
+    left: 10.6vh;
     bottom: -76vh;
     display: flex;
     align-items: center;
 }
 
 .OLD-RADMIR-green-zone__image {
-    margin-right: 3px;
+    margin-right: 10px;
 }
 
-.OLD-RADMIR-green-zone__text 
+.OLD-RADMIR-green-zone__text {
     color: #fff;
-    text-shadow: 3px 3px 5px #c7c7c7ff
+    text-shadow: 3px 3px 5px #00000080
 }
 
-.OLD-RADMIR-green-zone__text div:first-child 
+.OLD-RADMIR-green-zone__text div:first-child {
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 900;
     text-transform: uppercase;
 }
 
-.OLD-RADMIR-green-zone__text div:last-child 
+.OLD-RADMIR-green-zone__text div:last-child {
     color: hsl(0deg 0% 100% / 70%);
     font-size: 12px;
-    font-weight: 300;
-    margin-top: 2px;
+    font-weight: 500;
+    margin-top: 5px;
 }
 
 /* Additional styles from the request */
-#app .fuel__button .text:before { background: url() center/contain no-repeat !important } 
+#app .fuel__button .text:before { background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMyAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMS40NTEgMUw0LjQ4NCA3Ljg0OEwxIDQuNDI0IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=) center/contain no-repeat !important } 
 #app .fuel__container:before { opacity: 0 } 
 #app .fuel__container { padding: 3.33vh 2.96vh } 
 #app .fuel__title { font-size: 2.04vh; line-height: 1.94vh; color: #fff; text-align: left } 
@@ -2063,7 +2063,7 @@ ${bayokNewHudConfig.style.authorization}
 #app .fuel__fill .range-slider-knob { background: #fff !important } 
 #app .fuel__fill-data .text { color: hsla(0, 0%, 100%, .65) !important } 
 #app .fuel__fill-data .value { color: #fff !important } 
-#app .fuel__class-col.selected, .fuel__class-col:hover { background: #fff !important; box-shadow: 0 12px 22px #c7c7c7ff !important; color: #000 !important } 
+#app .fuel__class-col.selected, .fuel__class-col:hover { background: #fff !important; box-shadow: 0 12px 22px #ffffff14 !important; color: #000 !important } 
 #app .fuel__button { background: linear-gradient(185.93deg, #fff -22.13%, #e6e6e6 122.51%) !important; color: #000 !important } 
 #app .fuel__button:hover { box-shadow: 0 6px 20px #ffffff40 !important } 
 
@@ -2094,7 +2094,6 @@ body .info-card .text { color: #5c4686 }
 #app .trade-items { background: none } #app .trade-items__container { border-radius: 10px; height: 613px; width: 1283px; background: #5c4686 !important } #app .trade-items-main { right: -1.2vw; top: -2vh }
 #app .radmir-chat-input__input input::selection { background-color: #00ddff40 } #app .radmir-chat__before { position: fixed; width: 100vw; height: 41.66vw; background: #5c4686 !important; left: 0; top: 0; z-index: -1; opacity: 0; transition: all .2s ease; pointer-events: none } #app .radmir-chat-input__input { background: #5c4686 !important; border-radius: 11px !important } #app .radmir-chat-input__input input { margin-left: .9vh !important } #app .radmir-chat-input__input-lang { margin-right: 1vh !important } #app .controls-button { border-radius: .5vh }
 #app .modal-container-wrapper { background: rgba(92, 70, 134, 1) !important; border: 0.19vh solid #5c4686; border-radius: 2.5vh !important; } #app .modal_violet .modal-container { border-top: none !important; } #app .modal-light__light { background: none !important; } #app .modal-light__light_second { background: none !important; } #app .modal-light__light { background: none !important; } #app .modal-light__light_second { background: none !important; } #app .modal-overlay { background: none !important; } @media (platform:mobile) { #app .modal_blue .modal-container-wrapper { box-shadow: none !important; } #app .modal_blue .modal-container { border-width: 0.3704vh } } #app .modal_orange .modal-container { border-top: none !important; } #app .modal_orange .modal-container-wrapper { box-shadow: none !important; } @media (platform:mobile) { #app .modal_orange .modal-container-wrapper { box-shadow: none !important; } #app .modal_orange .modal-container { border-width: 0.3704vh } } #app .modal_violet .modal-container-wrapper { box-shadow: none !important; } @media (platform:mobile) { #app .modal_violet .modal-container-wrapper { box-shadow: none !important; } #app .modal_violet .modal-container { border-width: 0.3704vh } } #app .modal_green .modal-container { border-top: none !important; } #app .modal_green .modal-container-wrapper { box-shadow: none !important; } @media (platform:mobile) { #app .modal_green .modal-container-wrapper { box-shadow: none !important; } #app .modal_green .modal-container { border-width: 0.3704vh } } #app .modal_red .modal-container { border-top: none !important; } #app .modal_red .modal-container-wrapper { box-shadow: none !important; } @media (platform:mobile) { #app .modal_red .modal-container-wrapper { box-shadow: none !important; } #app .modal_red .modal-container { border-width: 0.3704vh } } #app .modal_dark-orange .modal-container { border-top: none !important; } #app .modal_dark-orange .modal-container-wrapper { box-shadow: none !important; } @media (platform:mobile) { #app .modal_dark-orange .modal-container-wrapper { box-shadow: none !important; } #app .modal_dark-orange .modal-container { border-width: 0.3704vh } } #app .modal_overlay-violet-blue .modal-overlay { background: none !important; } body .window-bg { background-image: none; } body .window__before { background-image: none; } body .window__title { text-align: center; color: #ffffff; } body .window-table__item { color: #fff; border-radius: 2vh; border: .09vh solid #5c4686; transition: .25s } body .window-table__item:before { border-radius: 3vh; background: linear-gradient(rgba(59, 59, 59, 0.161), rgba(59, 59, 59, 0.161)) } body .window-table__item:after { background: rgba(59, 59, 59, 0.161); border-radius: 3vh; } body .window-table__item.selected { background: #ffffff; color: #5c4686; border: .09vh solid #5c4686 } body .window-button { border-radius: 2vh; color: #ffffff; background: rgba(59, 59, 59, 0.161); } body .window-table__item:hover { background: #ffffff50; border-color: none } body .window-table__item.selected:hover { background: #ffffff; color: #5c4686; border: 0.09vh solid #5c4686; } #app .window-button:hover { color: #5c4686; background: #fff } #app .window-button:first-child:hover { background: #fff !important; } #app .window-button:first-child { background: #fff !important; } .graffiti-pattern__image[data-v-38ff9a6b] { background: none !important; }
-#app .inventory { background: none } #app .inventory-container__info__container { background: linear-gradient(45deg, #5c4686) !important; } #app .inventory-action__modal, #app .inventory-extra__container, #app .inventory-main { background: linear-gradient(45deg, #5c4686); } #app .inventory-main__after, #app .inventory-main__before { display: none } #app .inventory-extra__container, #app .inventory-main { padding: 2vh; background: #5c4686; border-radius: 1.1vh; border: 0; } #app .inventory-player { border: none; } #app .inventory-extra { margin-bottom: 0; margin-left: 1vh } #app .inventory__container, #app .inventory__controls { justify-content: center; } #app .inventory-capacity, #app .inventory-container__box { border-radius: 1vh; border: .1vh solid #5c4686; background: radial-gradient(#00000003, #5c4686 150%); } #app .inventory-container__slot { border-radius: 1vh; background: radial-gradient(5c4686, #ffffff33); } #app .inventory-capacity__bar__fill, #app .inventory-wear__bar__fill { border-radius: 1vh; } #app .inventory-capacity__bar, #app .inventory-wear__bar { background: #5c4686; border-radius: 1vh; width: 100%; left: 1.5vh; bottom: 1vh; } #app .inventory-extra__content { padding-bottom: .833vw; } #app .inventory-container__slot:before { border-radius: 1vh; border: .1vh solid #f4f1e1; background: radial-gradient(#00000003, #ffffffcc 150%); } .inventory-container__info__container { border: none !important; padding-top: .8vh !important; background: rgb(0 0 0 / 80%) !important; border-radius: 1.1vh !important; overflow: hidden; } .inventory-item-value, .inventory-wear { height: 4vh !important; border-radius: 1vh !important; border: .1vh solid #5c4686 !important; background: radial-gradient(#00000003, #5c4686) !important; } #app .inventory-wear__bar { bottom: .8vh; } #app .inventory-action__modal { padding: 2vh; background: #5c4686; border-radius: 1.1vh; } #app .inventory-action__item__icon { border-radius: 1vh; } #app .inventory-wear__content { margin: .5vh 1vh 0; } #app .inventory-item-value { padding: 0 2vh; } #app .inventory-container__count, #app .inventory-container__slot-image { z-index: 1; } #app .inventory-container__actions { border-bottom-left-radius: .8vh; border-bottom-right-radius: .8vh; overflow: hidden; }
 body .authorization{background:0 0}#app .authorization{background-image:url();background-size:auto 100vh}
       `;
         document.head.appendChild(hudStyleElement);
@@ -2152,7 +2151,7 @@ body .authorization{background:0 0}#app .authorization{background-image:url();ba
         </div>
       </div>
       <div class="Old-Fixed-HudBottom">
-      <div class="Old-Fixed-ZZ"><img src="${bayokNewHudConfig.icons.zone}"class="none"></div>
+      <div class="Old-Fixed-ZZ"><img src="${bayokNewHudConfig.icons.zone}" class="Old-Fixed-ZZ_icon"></div>
       <div class="Old-Fixed-Freeze">
       <span class="Old-Fixed-Freeze_text">Freeze:</span>
       <span class="Old-Fixed-Freeze_value">100</span>
@@ -2268,7 +2267,7 @@ body .authorization{background:0 0}#app .authorization{background-image:url();ba
         greenZone: (isVisible) => {
             const greenZoneEl = document.querySelector(".Old-Fixed-ZZ");
             if (greenZoneEl) {
-                greenZoneEl.style.display = isVisible ? "none" : "none";
+                greenZoneEl.style.display = isVisible ? "" : "none";
             }
         },
     };
