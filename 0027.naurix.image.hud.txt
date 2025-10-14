@@ -327,7 +327,7 @@ body .window-table__item.selected:hover {
     border-radius: 10px;
     height: 613px;
     width: 1283px;
-    background: #CB92C0!important
+    background: #5c4686!important
 }
 
 #app .trade-items {
@@ -345,13 +345,13 @@ body .window-table__item.selected:hover {
 }
 
 #app .inventory-container__info__container {
-    background: linear-gradient(45deg, #000000ef) !important;
+    background: linear-gradient(45deg, #5c4686) !important;
 }
 
 #app .inventory-action__modal,
 #app .inventory-extra__container,
 #app .inventory-main {
-    background: linear-gradient(45deg, #000000ef);
+    background: linear-gradient(45deg, #5c4686);
 }
 
 #app .inventory-main__after,
@@ -362,7 +362,7 @@ body .window-table__item.selected:hover {
 #app .inventory-extra__container,
 #app .inventory-main {
     padding: 2vh;
-    background: rgba(203,146,192, 0.8);
+    background: rgba(92, 70, 134);
     border-radius: 1.1vh;
     border: 0;
 }
@@ -384,13 +384,13 @@ body .window-table__item.selected:hover {
 #app .inventory-capacity,
 #app .inventory-container__box {
     border-radius: 1vh;
-    border: .1vh solid #ffffff26;
-    background: radial-gradient(#00000003, #ffffff26 150%);
+    border: .1vh solid #5c4686;
+    background: radial-gradient(#5c4686, #5c4686 150%);
 }
 
 #app .inventory-container__slot {
     border-radius: 1vh;
-    background: radial-gradient(#00000003, #ffffff33);
+    background: radial-gradient(#5c4686, #5c4686);
 }
 
 #app .inventory-capacity__bar__fill,
@@ -400,7 +400,7 @@ body .window-table__item.selected:hover {
 
 #app .inventory-capacity__bar,
 #app .inventory-wear__bar {
-    background: #f4f1e133;
+    background: #5c4686;
     border-radius: 1vh;
     width: 100%;
     left: 1.5vh;
@@ -413,14 +413,14 @@ body .window-table__item.selected:hover {
 
 #app .inventory-container__slot:before {
     border-radius: 1vh;
-    border: .1vh solid #f4f1e1;
-    background: radial-gradient(#00000003, #ffffffcc 150%);
+    border: .1vh solid #5c4686;
+    background: radial-gradient(#5c4686, #5c4686 150%);
 }
 
 .inventory-container__info__container {
     border: none !important;
     padding-top: .8vh !important;
-    background: rgb(0 0 0 / 80%) !important;
+    background: rgba(92, 70, 134) !important;
     border-radius: 1.1vh !important;
     overflow: hidden;
 }
@@ -429,8 +429,8 @@ body .window-table__item.selected:hover {
 .inventory-wear {
     height: 4vh !important;
     border-radius: 1vh !important;
-    border: .1vh solid #ffffff26 !important;
-    background: radial-gradient(#00000003, #ffffff26) !important;
+    border: .1vh solid #5c4686 !important;
+    background: radial-gradient(#5c4686, #5c4686) !important;
 }
 
 #app .inventory-wear__bar {
@@ -439,7 +439,7 @@ body .window-table__item.selected:hover {
 
 #app .inventory-action__modal {
     padding: 2vh;
-    background: rgba(203,146,192, 0.8);
+    background: rgba(92, 70, 134);
     border-radius: 1.1vh;
 }
 
@@ -1717,7 +1717,7 @@ body .capture-table__timer {
        margin-left: 3px
       }
       .Old-Fixed-Param.health .Old-Progress__Values{
-       background-color: #cf3e3e;
+       background-color: #ffffffff;
        box-shadow: #ffffffff 0 0 .46vh 0
       }
       .Old-Fixed-Param.armour .Old-Progress__Values{
@@ -2018,7 +2018,7 @@ ${bayokNewHudConfig.style.authorization}
 
 #app .login-form__button_active {
     color: #141414 !important;
-    background: #ffffff !important
+    background: #5c4686 !important
 }
 
 .OLD-RADMIR-green-zone__main {
