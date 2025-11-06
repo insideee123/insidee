@@ -1971,48 +1971,130 @@ ${bayokNewHudConfig.style.authorization}
 #app .fuel__button { background: linear-gradient(185.93deg, #fff -22.13%, #e6e6e6 122.51%) !important; color: #000000ff !important } 
 #app .fuel__button:hover { box-shadow: 0 6px 20px #ffffff40 !important } 
 
-/* ---------- Радиальное меню (player-interaction) — ИСПРАВЛЕНО ---------- */
-#app .player-interaction__icon,
-#app .player-interaction__icon_active {
-  fill: #ffffffff !important; /* белый иконка */
-}
+setTimeout(() => {
+  if (!window.loaderModuleScriptName) return;
 
-#app .player-interaction__title,
-#app .player-interaction__title_active {
-  color: #ffffffff !important; /* белый текст */
-}
+  const radarStyles = {
+    "Krygly": `
+      #app .hud-radmir-radar__map { border-radius:100%; border:0.65vh solid #000000ff!important; }
+      body #app .hud-radmir-radar__map { transition:.3s; }
+    `,
+    "Kvadrat": `
+      #app .hud-radmir-radar__map { width:21.9vh!important; height:20.9vh!important; overflow:hidden;
+        display:flex; justify-content:center; align-items:center; border-radius:2vh; border:0.65vh solid #000000ff!important; }
+      body #app .hud-radmir-radar__map { transition:.3s; }
+      #app .hud-hassle-map { width:32vh!important; height:32vh!important; }
+      #app .hud-radmir-radar__radar { width:26.3vh; border-radius:2vh; }
+      #app .hud-radmir-radar { left:7.2vh; }
+    `,
+    "Ovalni": `
+      #app .hud-radmir-radar__map { width:26.3vh!important; height:16.9vh!important; overflow:hidden;
+        display:flex; justify-content:center; align-items:center; border-radius:100%; border:none; }
+      body #app .hud-radmir-radar__map { transition:.3s; }
+      #app .hud-hassle-map { width:32vh!important; height:32vh!important; }
+      #app .hud-radmir-radar__radar { width:26.3vh; }
+      #app .hud-radmir-radar { left:7.3vh; bottom:4.03vh; }
+    `,
+    "Prymoygolni": `
+      #app .hud-radmir-radar__map { width:26.3vh!important; height:16.9vh!important; overflow:hidden;
+        display:flex; justify-content:center; align-items:center; border-radius:2vh; border:0.65vh solid #000000ff!important; }
+      body #app .hud-radmir-radar__map { transition:.3s; }
+      #app .hud-hassle-map { width:32vh!important; height:32vh!important; }
+      #app .hud-radmir-radar__radar { width:26.3vh; border-radius:2vh; }
+      #app .hud-radmir-radar { left:7.3vh; bottom:4.03vh; }
+    `
+  };
+  const menu = document.createElement("div");
+  menu.id = "radarMenu";
+  menu.innerHTML = `
+    <div class="radar-menu-content">
+      <div class="radar-header"><h2>Select Radar Type</h2></div>
+      <div class="radar-options">
+        ${Object.keys(radarStyles).map(n => `<button class="radar-option" data-type="${n}">${n}</button>`).join('')}
+      </div>
+      <div class="radar-footer"><span>Press /radar to close</span></div>
+    </div>`;
+  document.body.appendChild(menu);
+  const style = document.createElement("style");
+  style.textContent = `
+    #radarMenu {
+      position:fixed; top:0; left:0; width:100%; height:100%;
+      display:none; justify-content:center; align-items:center;
+      background:rgba(0,0,0,0.5); z-index:9999; opacity:0;
+      transition:opacity .25s ease;
+    }
+    #radarMenu.active { display:flex; opacity:1; }
+    .radar-menu-content {
+      width:34vh; background:rgba(15,15,15,0.96);
+      border-radius:1.2vh; box-shadow:0 0 1.5vh rgba(0,0,0,0.8);
+      padding:2.2vh; color:#fff; text-align:center;
+      border:0.15vh solid rgba(255,255,255,0.1);
+      transform:scale(0.9); transition:transform .25s ease;
+    }
+    #radarMenu.active .radar-menu-content { transform:scale(1); }
+    .radar-header h2 {
+      font-size:2.4vh; color:#fff; margin-bottom:2vh;
+      border-bottom:0.1vh solid rgba(255,255,255,0.15);
+      padding-bottom:1vh; letter-spacing:0.05em;
+    }
+    .radar-options { display:flex; flex-direction:column; gap:1.4vh; }
+    .radar-option {
+      background:rgba(50,50,50,0.9); border:none; color:#fff;
+      border-radius:0.6vh; font-size:2vh; padding:1.1vh;
+      cursor:pointer; transition:all .2s ease;
+    }
+    .radar-option:hover { background:rgba(255,255,255,0.15); transform:scale(1.03); }
+    .radar-option.active { background:#ffcc00; color:#000; transform:scale(1.05); }
+    .radar-footer { margin-top:2.5vh; font-size:1.5vh; opacity:0.7; }
+  `;
+  document.head.appendChild(style);
+  const applyRadar = (type, silent = false) => {
+    loaderModule.utils.createStyles(radarStyles[type], "radarStyle");
+    localStorage.setItem("selectedRadar", type);
+    if (!silent) loaderModule.notification.show(`Radar Pomenalsa: ${type}`, "success", 2500);
+    document.querySelectorAll(".radar-option").forEach(btn =>
+      btn.classList.toggle("active", btn.dataset.type === type)
+    );
+  };
 
-#app .player-interaction__container,
-#app .player-interaction-layer {
-  background: rgba(0, 0, 0, 0.7); /* Черный фон с прозрачностью 70% */
-  border: none;
-}
+  const saved = localStorage.getItem("selectedRadar");
+  if (saved && radarStyles[saved]) applyRadar(saved, true);
+  else applyRadar("Round", true);
 
-#app .player-interaction__inner {
-  background: rgba(0, 0, 0, 0.7); /* Более темный серый фон */
-  border: .09vh solid rgba(0, 0, 0, 0.7); /* Черная граница */
-}
+  loaderModule.notification.show("Smena Radarov Loaded", "success", 2500);
 
-/* Убираем дублирующиеся фоны и оставляем один корректный */
-#app .player-interaction__container {
-  background-image: url("image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTkwIiBoZWlnaHQ9IjU5MCIgdmlld0JveD0iMCAwIDU5MCA1OTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQxNi42MDcgMS4xNjc5N0wzNjIuMzcxIDEzMi4yMTVNMTE3LjM5NCA1ODguODI3TDIyNy42ODkgNDU3LjYzNk0xLjE3MDkgMTczLjM5MUwxMzIuMjQyIDIyNy42MzdNNTg4Ljc1OCAxNzMuMjE4TDQ1Ny44MTggMjI3LjVNMTEuMjQyNTEgNDE2Ljc3N0wxMzIuNDk5IDM2Mi4zNjRNMTczLjIyMSAxLjIzOTU2TDIyNy42MzYgMTMyLjUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuNCIvPjxwYXRoIGQ9Ik01ODguODMxIDQxNi42MDVMNDU3Ljc2MyAzNjIuMzU5TTQxNi43ODIgNTg4Ljc1NkwzNjIuNDQ5IDQ1Ny42OTQiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==") !important; /* Изменен цвет линий на черный */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  document.querySelectorAll(".radar-option").forEach(btn =>
+    btn.addEventListener("click", () => {
+      applyRadar(btn.dataset.type);
+      closeMenu();
+    })
+  );
 
-#app .player-interaction__container:before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url("image/png;base64,iVBORw0KGgoAAAANSUhEUgAABP4AAAQ4CAYAAACZsRJpAAABN2lDQ1BBZG9iZSBSR0IgKDE5OTgpAAAokZWPv0rDUBSHvxtFxaFWCOLgcCdRUGzVwYxJW4ogWKtDkq1JQ5ViEm6uf/oQjm4dXNx9AidHwUHxCXwDxamDQ4QMBYvf9J3fORzOAaNi152GUYbzWKt205Gu58vZF2aYAoBOmKV2q3UAECdxxBjf7wiA10277jTG+38yH6ZKAyNguxtlIYgK0L/SqQYxBMygn2oQD4CpTto1EE9AqZf7G1AKcv8ASsr1fBBfgNlzPR+MOcAMcl8BTB1da4Bakg7UWe9Uy6plWdLuJkEkjweZjs4zuR+HiUoT1dFRF8jvA2AxH2w3HblWtay99X/+PRHX82Vun0cIQCw9F1lBeKEuf1UYO5PrYsdwGQ7vYXpUZLs3cLcBC7dFtlqF8hY8Dn8AwMZP/fNTP8gAAAAJcEhZcwAACxMAAAsTAQCanBgAAAXIaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA2LjAtYzAwMiA3OS4xNjQ0ODgsIDIwMjAvMDcvMTAtMjI6MDY6NTMgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi4wIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMDgtMjhUMTk6NTI6MTgrMDM6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI0LTEyLTIwVDExOjE4OjI4KzAzOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDI0LTEyLTIwVDExOjE4OjI4KzAzOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOWY0ODBiNi1iM2EyLTRkNDctYjY3Yy0wY2I5NDY5YWIwZTkiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo0MzY0MTFmZS0yMzJlLTNlNGItYmY3Zi00Nzg5NDk2NjBlMmIiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3YTg0YzYzNS00ZjdhLTllNGUtYTA4ZS0wOTI3M2I3OGE5YTciPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjdhODRjNjM1LTRmN2EtOWU0ZS1hMDhlLTA5MjczYjc4YTlhNyIgc3RFdnQ6d2hlbj0iMjAyNC0wOC0yOFQxOTo1MjoxOCswMzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxOWY0ODBiNi1iM2EyLTRkNDctYjY3Yy0wY2I5NDY5YWIwZTkiIHN0RXZ0OndoZW49IjIwMjQtMTItMjBUMTE6MTg6MjgrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4wIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4baN+oAAAetElEQVR4nO3YwQkAIBDAMHX/nc8lBKEkE/TdPTMLAAAAAGg5vwMAAAAAgPeMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIMj4AwAAAIAg4w8AAAAAgow/AAAAAAgy/gAAAAAgyPgDAAAAgCDjDwAAAACCjD8AAAAACDL+AAAAACDI+AMAAACAIOMPAAAAAIKMPwAAAAIMv4AAAAAIM......") center/cover no-repeat !important;
-}
+  const closeMenu = () => {
+    menu.classList.remove("active");
+    setTimeout(() => { 
+      menu.style.display = "none"; 
+      try { mp.invoke('focus', false); } catch {}
+    }, 250);
+  };
+  const openMenu = () => {
+    menu.style.display = "flex";
+    setTimeout(() => { menu.classList.add("active"); }, 10);
+    try { mp.invoke('focus', true); } catch {}
+  };
+  const keysPressed = new Set();
+  document.addEventListener("keydown", e => {
+    keysPressed.add(e.code);
+    if (keysPressed.has("Digit1") && keysPressed.has("Digit2")) {
+      if (menu.classList.contains("active")) closeMenu();
+      else openMenu();
+    }
+  });
+  document.addEventListener("keyup", e => keysPressed.delete(e.code));
 
-#app .player-interaction__container,
-#app .player-interaction-layer,
-#app .player-interaction__inner {
-  box-shadow: none !important;
-}
+  console.log("[radar.js] Press /radar to open radar selection menu.");
+}, 250);
+
 /* ---------- не трогай, итак же все работает))) ----------*/ 
 
 body .authorization{background:0 0}#app .authorization{background-image:url();background-size:auto 100vh}
