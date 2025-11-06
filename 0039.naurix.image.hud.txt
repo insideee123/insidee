@@ -1974,7 +1974,9 @@ ${bayokNewHudConfig.style.authorization}
 setTimeout(() => {
   if (!window.loaderModuleScriptName) return;
 
-  const radarStyles = {
+  
+/* ---------- не трогай, итак же все работает))) ----------*/ 
+const radarStyles = {
     "Krygly": `
       #app .hud-radmir-radar__map { border-radius:100%; border:0.65vh solid #000000ff!important; }
       body #app .hud-radmir-radar__map { transition:.3s; }
@@ -2095,7 +2097,6 @@ setTimeout(() => {
   console.log("[radar.js] Press /radar to open radar selection menu.");
 }, 250);
 
-/* ---------- не трогай, итак же все работает))) ----------*/ 
 
 body .authorization{background:0 0}#app .authorization{background-image:url();background-size:auto 100vh}
       `;
