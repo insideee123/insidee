@@ -252,9 +252,9 @@ const oldRadmirConfig = {
       }
       /* ------- РАЗМЕР ЛОГА, 20.52/6.2 ДЕФОЛТНОЕ ------- */
       .Old-Fixed-Logo img{
-       width:20.52vh;
+       width:20.72vh;
        height:6.2vh;
-       margin-right:2vh
+       margin-right:4vh
       }
 
       /* ------- ЦВЕТ Х3-Х2 ------- */
@@ -265,16 +265,16 @@ const oldRadmirConfig = {
        display: flex;
        align-items: center;
        justify-content: center;
-       font-size: 16px;
+       font-size: 17px;
        color: #fff;
        font-weight: 700;
        position: absolute;
-       bottom: 1px;
-       right: -5px;
+       bottom: 2vh;
+       right: 1vh;
        border-radius: 50%;
        font-family:'GothamPro Black';
        font-weight: 900;
-       font-size: 1.3vh
+       font-size: 1.4vh
       }
       .Old-Fixed-Main,.Old-Fixed-Cash,.Wanted_row{
        align-items:center;
