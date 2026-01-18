@@ -14,7 +14,7 @@ function AddHud() {
         loadingNotification.style.padding = '10px 20px';
         loadingNotification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
         loadingNotification.style.color = '#fff';
-        loadingNotification.style.fontFamily = 'Arial, sans-serif';
+        loadingNotification.style.fontFamily = 'Font';
         loadingNotification.style.fontSize = '16px';
         loadingNotification.style.borderRadius = '8px';
         loadingNotification.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.3)';
@@ -252,8 +252,8 @@ const oldRadmirConfig = {
       }
       /* ------- РАЗМЕР ЛОГА, 20.52/6.2 ДЕФОЛТНОЕ ------- */
       .Old-Fixed-Logo img{
-       width:21.52vh;
-       height:7.2vh;
+       width:20.52vh;
+       height:6.2vh;
        margin-right:2vh
       }
 
@@ -309,7 +309,7 @@ const oldRadmirConfig = {
       .Old-Fixed-Weapon_ammo{
        position:absolute;
        bottom:5.6vh;
-       right:3vh;
+       right:5vh;
        display:flex;
        align-items:flex-end;
        color: #fff;
@@ -444,7 +444,7 @@ const oldRadmirConfig = {
        z-index:-1
       }
       .Wanted_row img{
-       width: 1.45vw;
+       width: 1.35vw;
        height: 2vh;
        padding:.19vh .28vh
       }
@@ -454,7 +454,7 @@ const oldRadmirConfig = {
         right: 0;
         top: 20px;
       }
-      .Old-Fixed-ZZ
+      .Old-Fixed-ZZ{
        position:absolute;
        left:21.3vh;
        bottom:-98.9vh
@@ -475,8 +475,10 @@ const oldRadmirConfig = {
         left: 11.1620vh;
         bottom: 2.7778vh;
       }
-      #app .hud-radmir-radar__map { width: 26.3vh !important; height: 16.9vh !important; overflow: hidden; display: flex; justify-content: center; align-items: center; border-radius: 100%; border: none } body #app .hud-radmir-radar__map { transition: .3s } #app .hud-hassle-map { width: 32vh !important; height: 32vh !important } #app .hud-radmir-radar__radar { width: 26.3vh } #app .hud-radmir-radar { left: 7.3vh; bottom: 4.03vh }
-      body .OLD-RADMIR-logo__bonus {
+
+/* ---------- круглый ----------*/ #app .hud-radmir-radar__map { border-radius: 100%; border: 0.50vh solid #c8cfff !important } body #app .hud-radmir-radar__map { transition: .3s }
+
+body .OLD-RADMIR-logo__bonus {
     background: #000000c5
 }
 
@@ -652,13 +654,13 @@ body .authorization{background:0 0}#app .authorization{background-image:url("dat
             const freezeEl = document.querySelector(".Old-Fixed-Freeze");
             const isVisible = window.interface("Hud").isNewYear;
             if (freezeEl) {
-                freezeEl.style.display = isVisible ? "" : "none";
+                freezeEl.style.display = isVisible ? "/" : "none";
             }
         },*/
         greenZone: (isVisible) => {
             const greenZoneEl = document.querySelector(".Old-Fixed-ZZ");
             if (greenZoneEl) {
-                greenZoneEl.style.display = isVisible ? "" : "none";
+                greenZoneEl.style.display = isVisible ? "/" : "none";
             }
         },
     };
