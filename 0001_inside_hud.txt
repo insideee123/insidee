@@ -248,7 +248,7 @@ const oldRadmirConfig = {
       }
       .Old-Fixed-Logo{
        position:relative;
-       margin-bottom:8vh
+       margin-bottom:4vh
       }
       /* ------- РАЗМЕР ЛОГА, 20.52/6.2 ДЕФОЛТНОЕ ------- */
       .Old-Fixed-Logo img{
@@ -269,8 +269,8 @@ const oldRadmirConfig = {
        color: #fff;
        font-weight: 700;
        position: absolute;
-       bottom: 2vh;
-       right: 10vh;
+       bottom: -5px;
+       right: -2px;
        border-radius: 50%;
        font-family:'GothamPro Black';
        font-weight: 900;
@@ -309,7 +309,7 @@ const oldRadmirConfig = {
       .Old-Fixed-Weapon_ammo{
        position:absolute;
        bottom:4.8vh;
-       right:4.3vh;
+       right:4.8vh;
        display:flex;
        align-items:flex-end;
        color: #fff;
