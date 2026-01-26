@@ -254,22 +254,22 @@ const oldRadmirConfig = {
       .Old-Fixed-Logo img{
        width:19.72vh;
        height:6.2vh;
-       margin-right:10vh
+       margin-right:5vh
       }
 
       /* ------- ЦВЕТ Х3-Х2 ------- */
       .Old-Fixed-Bonus{
        position: absolute;
-       right: 3vh;
-       top: 1vh;
-       width: 3.96vh;
-       height: 3.96vh;
+       right: 4vh;
+       top: 2vh;
+       width: 2.96vh;
+       height: 2.96vh;
        border-radius: 10vh;
        background: radial-gradient(93.1% 93.1% at 126.72% 6.9%, #eb00ff 0, #eb00ff00 100%), linear-gradient(129.39deg, #f5be09 30.88%, #e9651b 98.06%);
        display: flex;
        align-items: center;
        justify-content: center;
-       font-family: 'GothamPro Medium Italic';
+       font-family: 'GothamPro Pro Medium';
        font-weight: 900;
        font-size: 1.3vh;
       }
