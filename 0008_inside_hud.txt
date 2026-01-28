@@ -252,8 +252,8 @@ const oldRadmirConfig = {
       }
       /* ------- РАЗМЕР ЛОГА, 20.52/6.2 ДЕФОЛТНОЕ ------- */
       .Old-Fixed-Logo img{
-       width:20.72vh;
-       height:6.2vh;
+       width:20.92vh;
+       height:7.2vh;
        margin-right:6vh
       }
 
