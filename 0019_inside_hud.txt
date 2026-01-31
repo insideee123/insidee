@@ -1353,19 +1353,26 @@ AddHud()
 
  (function waitForAuthorization() {
     const observer = new MutationObserver(() => {
-        // ⚠️ селектор нужно подобрать под твой authorization
-        const authWindow = document.querySelector(
-            '.modal-container-wrapper, .authorization, .login'
-        );
+        const auth = document.querySelector('.authorization');
 
-        if (authWindow) {
-            observer.disconnect(); // больше не следим
-            AddHud();              // 🚀 грузим HUD
+        if (!auth) return;
+
+        const style = getComputedStyle(auth);
+        const isVisible =
+            style.display !== 'none' &&
+            style.visibility !== 'hidden' &&
+            style.opacity !== '0';
+
+        if (isVisible) {
+            observer.disconnect();
+            AddHud();
         }
     });
 
     observer.observe(document.body, {
         childList: true,
-        subtree: true
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['style', 'class']
     });
 })();
