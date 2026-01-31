@@ -269,10 +269,10 @@ const oldRadmirConfig = {
        color: #fff;
        font-weight: 700;
        position: absolute;
-       bottom: 4vh;
+       bottom: 2vh;
        right: 5vh;
        border-radius: 50%;
-       font-family:'GothamPro italic';
+       font-family:'GothamPro Black Italic';
        font-weight: 900;
        font-size: 1.4vh
       }
@@ -303,8 +303,8 @@ const oldRadmirConfig = {
        z-index:-1
       }
       .Old-Fixed-Weapon_icon{
-       width:37vh;
-       height:16.6vh
+       width:35vh;
+       height:15.6vh
       }
       .Old-Fixed-Weapon_ammo{
        position:absolute;
