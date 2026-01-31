@@ -1465,3 +1465,42 @@ AddHud()
 
 })();
 
+
+
+
+/* ===== HUD TYPE FUNCTIONS (Old-Fixed-*) REPLACEMENT ===== */
+
+(function () {
+    function qs(sel){ return document.querySelector(sel); }
+
+    window.setServer = function(serverName){
+        const logo = qs(".Old-Fixed-logo");
+        if (logo) logo.textContent = serverName;
+    };
+
+    window.setVehicle = function(imageUrl){
+        const img = qs(".Old-Fixed-Car img");
+        if (!img) return;
+        img.src = imageUrl || "";
+        img.style.display = imageUrl ? "" : "none";
+    };
+
+    window.setMoney = function(value){
+        const cash = qs(".Old-Fixed-Cash span");
+        if (cash) cash.textContent = Number(value || 0).toLocaleString("ru-RU");
+    };
+
+    window.setStats = function(health, armor, hunger){
+        const hp = qs(".Old-Fixed-Health");
+        const ar = qs(".Old-Fixed-Armor");
+        const hg = qs(".Old-Fixed-Hunger");
+        if (hp) hp.textContent = health ?? "";
+        if (ar) ar.textContent = armor ?? "";
+        if (hg) hg.textContent = hunger ?? "";
+    };
+
+    window.showHudCard = function(state){
+        const card = qs(".Old-Fixed-Weapon");
+        if (card) card.style.display = state ? "" : "none";
+    };
+})();
