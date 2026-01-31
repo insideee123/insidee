@@ -248,13 +248,13 @@ const oldRadmirConfig = {
       }
       .Old-Fixed-Logo{
        position:relative;
-       margin-bottom:5vh
+       margin-bottom:4.5vh
       }
       /* ------- РАЗМЕР ЛОГА, 20.52/6.2 ДЕФОЛТНОЕ ------- */
       .Old-Fixed-Logo img{
-       width:20.72vh;
-       height:6.2vh;
-       margin-right:5vh
+       width:21.72vh;
+       height:7.2vh;
+       margin-right:4vh
       }
 
       /* ------- ЦВЕТ Х3-Х2 ------- */
@@ -269,10 +269,10 @@ const oldRadmirConfig = {
        color: #fff;
        font-weight: 700;
        position: absolute;
-       bottom: 6vh;
+       bottom: 4vh;
        right: 5vh;
        border-radius: 50%;
-       font-family:'GothamPro Black';
+       font-family:'GothamPro italic';
        font-weight: 900;
        font-size: 1.4vh
       }
@@ -1179,7 +1179,7 @@ body .authorization{background:0 0}#app .authorization{background-image:url("dat
         },
         breath: (value) => {
             const breathWrapper = document.querySelector(".Old-Fixed-Param.breath .Old-Param-Progress")?.parentElement;
-            if (breathWrapper) breathWrapper.style.display = value < 99 ? "" : "none";
+            if (breathWrapper) breathWrapper.style.display = value < 100 ? "" : "none";
             updateParam("breath", value);
         },
         bonus: (bonusValue) => {
