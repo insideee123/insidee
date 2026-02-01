@@ -356,13 +356,14 @@ const oldRadmirConfig = {
         margin-left:1.85vh
       }
       .Old-Fixed-Param.armour{
-        margin-left: 10vh
+        margin-left:1.85vh
+        margin-top:2;
       }
       .Old-Param-Progress,.Old-Progress__Values{
        width:9.40vh;
        height:.45vh;
        background-color: #0000004d;
-       border-radius:.47vh
+       border-radius:.44vh
       }
       .Old-Progress__Values{
        display:flex;
