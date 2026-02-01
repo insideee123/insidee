@@ -356,7 +356,7 @@ const oldRadmirConfig = {
         margin-left:1.85vh
       }
       .Old-Fixed-Param.armour,.Old-Param-Values{
-       margin-left: 0.9vh
+       margin-left: 0.6vh
       }
       .Old-Param-Progress,.Old-Progress__Values{
        width:9.40vh;
