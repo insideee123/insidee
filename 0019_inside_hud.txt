@@ -340,7 +340,7 @@ const oldRadmirConfig = {
        text-shadow:0 0 .46vh #00000080
       }
       .Old-Fixed-Cash img{
-       margin-right: 10px;
+       margin-right: 8px;
        margin-top: 1px
       }
       .Old-Fixed-Params__all{
@@ -394,10 +394,11 @@ const oldRadmirConfig = {
        text-shadow:0 0 2vh #000
       }
       .Old-Fixed-Param.hunger{
-       margin-left: 3px
+       margin-left: 0.9vh
       }
       .Old-Fixed-Param.breath{
-       margin-left: 3px
+       margin-left: -1vh;
+       margin-top: 1.5vh;
       }
      /* ------- ЦВЕТ БАРОВ(ХП,ЕДА,БРОНИК) ------- */
 
@@ -419,10 +420,10 @@ const oldRadmirConfig = {
         box-shadow: #ffffff79 0 0 5px 0
       }
       .Old-Fixed-Param.health .old-param__icon{
-       width: 1.32vh;height: 1.35vh;
+       width: 1.34vh;height: 1.35vh;
       }
       .Old-Fixed-Param.armour .old-param__icon{
-       width: 1.32vh;height: 1.35vh;
+       width: 1.34vh;height: 1.35vh;
       }
       .Old-Fixed-Param.hunger .old-param__icon{
        width: 1.40vh;height: 1.35vh;
