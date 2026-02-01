@@ -403,16 +403,15 @@ const oldRadmirConfig = {
 
       .Old-Fixed-Param.health .Old-Progress__Values{
        background-color: #ed2e2e;
-       box-shadow: #ed2e2e79 0 0 .46vh 0
+       box-shadow: #ed2e2e80 0 0 .46vh 0;
       }
       .Old-Fixed-Param.armour .Old-Progress__Values{
        background-color: #526ee6;
-       box-shadow: #526de679 0 0 .46vh 0
+       box-shadow: #526ee680 0 0 .46vh 0;
       }
       .Old-Fixed-Param.hunger .Old-Progress__Values{
-       width: 50%;
-       box-shadow: #ff892e79;
-       background-color: #ff872e
+      background-color: #ff872e;
+       box-shadow: #ff892e4d 0 0 .46vh 0;
       }
       .Old-Fixed-Param.breath .Old-Progress__Values{
         width: 99%;
@@ -420,17 +419,16 @@ const oldRadmirConfig = {
         box-shadow: #ffffff79 0 0 5px 0
       }
       .Old-Fixed-Param.health .old-param__icon{
-       margin-left: 20px
+       width: 1.75vh;height: 1.5vh;
       }
       .Old-Fixed-Param.armour .old-param__icon{
-       margin-left: 14px
+       width: 1.75vh;height: 1.75vh;
       }
       .Old-Fixed-Param.hunger .old-param__icon{
-       margin-left: 0.7px
+       width: 1.75vh;height: 1.75vh;
       }
       .Old-Fixed-Param.breath .old-param__icon{
-       width:1.7vh;
-       height:1.7vh
+       width: .85vh;height: .95vh;
       }
       .Old-Fixed-Wanted{
        position:relative;
