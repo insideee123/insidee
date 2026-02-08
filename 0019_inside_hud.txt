@@ -1862,8 +1862,8 @@ AddHud();
     }, 100);
 })();
 
-(function () {
-const loaderModule= 
+
+const loaderModule={ 
     socket:  {
         websocket: "http://localhost:7524", connection: !0, sendEvent(e, o=(()=> {
 
