@@ -1354,20 +1354,18 @@ AddHud();
         }
 
         .gz-title {
-            color: #ffffff;
-            font-size: 1.45vh;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            text-shadow: 0 0 5px rgba(0,0,0,.85);
+        color: #ffffff;
+        font-size: 1.4vh;
+        font-weight: 900;
+        text-transform: uppercase;
         }
 
         .gz-subtitle {
-            color: rgba(255,255,255,.65);
-            font-size: 1.15vh;
+            color: rgb(255, 255, 255);
+            text-shadow: .28vh .28vh .46vh #00000080;
+            font-size: 1.31vh;
             font-weight: 500;
-            line-height: 1.35;
-            text-shadow: 0 0 4px rgba(0,0,0,.8);
+            margin-top: .50vh;
         }
     `;
     document.head.appendChild(style);
