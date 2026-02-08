@@ -440,7 +440,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Wanted_back {
     position: absolute;
     right: -1.2vh;
-    top: -4vh;
+    top: 0vh;
     z-index: -1;
 }
 
