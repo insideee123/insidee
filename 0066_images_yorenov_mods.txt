@@ -1,5 +1,4 @@
 window.yorenovSampHud = {
-const yorenovHud = {
     addChatMessage(message) {
         //window.interface("Hud").$refs.chat.add(message, 123456);
         //window.interface("GameText").add(`[2, "~R~[SAMPHUD | yorenov]: ${message}", 7000,0,-1,-1]`);
