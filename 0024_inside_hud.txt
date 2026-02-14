@@ -250,7 +250,7 @@ body #app .hud-radmir-info { display: none; }
     margin-bottom: 3vh;
 }
 .Old-Fixed-Logo img {
-    width: 22.52vh;
+    width: 23.52vh;
     height: 10.2vh;
     margin-right: 2vh;
 }
