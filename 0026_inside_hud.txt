@@ -448,10 +448,10 @@ justify-content: center;
         font-family: SAfonts!important;
       }
 .Old-Fixed-Params__all {
-    margin-top: -2vh;
+    margin-top: 2vh;
 }
-.Old-Fixed-Param {
-width: 16.2037vh;
+       .Old-Fixed-Param {
+        width: 16.2037vh;
         height: 1.1111vh;
         box-shadow: #000 0 0 0 .4167vh;
       }
@@ -477,7 +477,7 @@ width: 16.2037vh;
         font-size: 1.6667vh;
         font-weight: 500;
         margin-left: -50%;
-        position: absolute;
+        position: relative;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -493,15 +493,10 @@ width: 16.2037vh;
     font-size: 2vh;
     text-shadow: 0 0 2vh #000;
 }
-.Old-Fixed-Param.hunger {
-    margin-left: .35vh;
-}
-.Old-Fixed-Param.breath {
-    margin-left: 3px;
-    display: none;
-}
+
 .Old-Fixed-Param.health .Old-Progress__Values {
     background-color: #5a0c0e;
+    position: -3vh
     
 }
 .Old-Fixed-Param.armour .Old-Progress__Values {
