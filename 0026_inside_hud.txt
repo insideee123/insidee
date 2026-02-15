@@ -450,14 +450,8 @@ justify-content: center;
 .Old-Fixed-Params__all {
     margin-top: 2vh;
 }
-       .Old-Fixed-Param {
-        width: 16.2037vh;
-        height: 1.1111vh;
-        box-shadow: #000 0 0 0 .4167vh;
-      }
-
-.Old-Param-Progress, .Old-Progress__Values {
-  display: flex;
+       .YORENOV-hud__params {
+        display: flex;
         flex-direction: column;
         position: absolute;
         right: 4.6444vh;
@@ -466,12 +460,28 @@ justify-content: center;
         height: 9.1852vh;
         padding-bottom: .7407vh;
       }
-.Old-Progress__Values {
-  height: 1.1111vh;
+
+      .YORENOV-param {
+        display: flex;
+        align-items: center;
       }
 
-.Old-Param-Values {
-     opacity: 0;
+      .YORENOV-param__progress {
+        width: 16.2037vh;
+        height: 1.1111vh;
+        box-shadow: #000 0 0 0 .4167vh;
+      }
+
+      .YORENOV-progress__value {
+        height: 1.1111vh;
+      }
+
+      .show-values .YORENOV-param__amount {
+        opacity: 1;
+      }
+
+      .YORENOV-param__amount {
+        opacity: 0;
         width: 4.6296vh;
         color: #fff;
         font-size: 1.6667vh;
@@ -483,9 +493,32 @@ justify-content: center;
         text-align: center;
       }
 
-.Old-Fixed-Freeze_text {
-    margin-right: 1vh;
-}
+      .YORENOV-param__health .YORENOV-param__progress {
+        background-color: #5a0c0e;
+      }
+
+      .YORENOV-param__health .YORENOV-progress__value {
+        width: 50%;
+        background-color: #b11a22;
+      }
+
+      .YORENOV-param__hunger .YORENOV-param__progress {
+        background-color: #5a2f10;
+      }
+
+      .YORENOV-param__hunger .YORENOV-progress__value {
+        width: 50%;
+        background-color: #ff872e;
+      }
+
+      .YORENOV-param__armour .YORENOV-param__progress {
+        background-color: #5e5e5e;
+      }
+
+      .YORENOV-param__armour .YORENOV-progress__value {
+        width: 50%;
+        background-color: #fff;
+      }
 .Old-Fixed-Freeze_value, .Old-Fixed-Freeze_text {
     font-family: "GothamPro Bold";
     font-weight: 900;
