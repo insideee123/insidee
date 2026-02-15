@@ -442,7 +442,7 @@ YORENOV-hud__cash #YORENOV-cash__value,.YORENOV-hud__cash #YORENOV-cash__value::
         align-items: center;
       }
 
-      .YORENOV-hud__cash #YORENOV-cash__value::before {
+      .Old-Fixed-Cash.Old-Fixed-Cash__value::before {
         position: absolute;
         content: "j";
         font-family: ALSRubl;
@@ -452,18 +452,18 @@ YORENOV-hud__cash #YORENOV-cash__value,.YORENOV-hud__cash #YORENOV-cash__value::
         font-size: 5.0926vh;
       }
 
-      .YORENOV-hud__cash #YORENOV-cash__value {
+      .Old-Fixed-Cash.Old-Fixed-Cash__value {
         font-weight: 900;
         display: inline-block;
         letter-spacing: .2778vh;
         font-style: normal;
         font-size: 7.5vh;
-        font-family: SAfonts!important;
+        font-family: "GothamPro Black Italic" !important;
       }
 
       .Old-Fixed-Params {
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         position: absolute;
         right: 4.6444vh;
         top: 7.3148vh;
@@ -487,8 +487,8 @@ YORENOV-hud__cash #YORENOV-cash__value,.YORENOV-hud__cash #YORENOV-cash__value::
         height: 1.1111vh;
       }
 
-      .show-values Old-Param-Values {
-        opacity: 3;
+      Old-show-values Old-Param-Values {
+        opacity: 1;
       }
 
       Old-Param-Values {
