@@ -378,7 +378,7 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Weapon {
 position: absolute;
- top: 4.537vh;
+ top: 5.537vh;
 right: 26.6667vh;
 }
 .Ammo-in-clip, .old-param__icon {
@@ -424,29 +424,16 @@ justify-content: center;
         display: inline-flex;
         align-items: center;
       }
-        .Old-Fixed-Cash .Old-Fixed-cash__value {
-        position: absolute;
-        content: "j";
-        font-family: ALSRubl;
-        left: -3.8889vh;
-        z-index: -1;
-        margin-top: .2778vh;
-        font-size: 5.0926vh;
-      }
 
       .Old-Fixed-Params {
         display: flex;
         flex-direction: column;
         position: absolute;
         right: 3.6444vh;
-        top: 10.3148vh;
+        top: 9.3148vh;
         justify-content: flex-end;
         height: 9.1852vh;
-        padding-bottom: .7407vh;
-      }
-      .Old-Fixed-Param {
-      display: flex;
-      align-items: center;
+        padding-bottom: 1vh;
       }
       .Old-Param-Progress {
         width: 16.2037vh;
