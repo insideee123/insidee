@@ -416,67 +416,54 @@ justify-content: center;
     font-size: 1.67vh;
     text-shadow: 0 0 .46vh #000000b3;
 }
-    .YORENOV-hud__cash #YORENOV-cash__value,.YORENOV-hud__cash #YORENOV-cash__value::before {
-        color: #36662c;
-        text-shadow: 0 -.463vh 0 #000300,0 -.463vh 0 #000300,0 .463vh 0 #000300,0 .463vh 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.0926vh -.463vh 0 #000300,.0926vh -.463vh 0 #000300,-.0926vh .463vh 0 #000300,.0926vh .463vh 0 #000300,-.463vh -.0926vh 0 #000300,.463vh -.0926vh 0 #000300,-.463vh .0926vh 0 #000300,.463vh .0926vh 0 #000300,-.1852vh -.463vh 0 #000300,.1852vh -.463vh 0 #000300,-.1852vh .463vh 0 #000300,.1852vh .463vh 0 #000300,-.463vh -.1852vh 0 #000300,.463vh -.1852vh 0 #000300,-.463vh .1852vh 0 #000300,.463vh .1852vh 0 #000300,-.2778vh -.463vh 0 #000300,.2778vh -.463vh 0 #000300,-.2778vh .463vh 0 #000300,.2778vh .463vh 0 #000300,-.463vh -.2778vh 0 #000300,.463vh -.2778vh 0 #000300,-.463vh .2778vh 0 #000300,.463vh .2778vh 0 #000300,-.3704vh -.463vh 0 #000300,.3704vh -.463vh 0 #000300,-.3704vh .463vh 0 #000300,.3704vh .463vh 0 #000300,-.463vh -.3704vh 0 #000300,.463vh -.3704vh 0 #000300,-.463vh .3704vh 0 #000300,.463vh .3704vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300;
-      }
-      .YORENOV-hud__cash {
+    .Old-Fixed-Params {
+    height: 13vh;
+    position: relative;
+    z-index: 1;
+}
+.Old-Fixed-Cash {
+    justify-content: flex-end;
+    color: white;
+    font-family: "GothamPro Black Italic";
+    font-style: italic;
+    font-size: 2.59vh;
+    text-shadow: 0 0 .46vh #00000080;
+}
+.Old-Fixed-Cash img {
+    margin-right: 13px;
+    margin-top: 1px;
+}
+.Old-Fixed-Params__all {
+    margin-top: 1vh;
+}
+.Old-Fixed-Param {
+   display: flex;
+        flex-direction: column;
         position: absolute;
-        right: 8.8889vh;
-        top: 16.0185vh;
-        transform: scale(1,.85);
-        display: inline-flex;
+        right: 4.6444vh;
+        top: 7.3148vh;
+        justify-content: flex-end;
+        height: 9.1852vh;
+        padding-bottom: .7407vh;
+      }
+.Old-Fixed-Param.health {
+   display: flex;
         align-items: center;
       }
-
-      .YORENOV-hud__cash #YORENOV-cash__value::before {
-        position: absolute;
-        content: "j";
-        font-family: ALSRubl;
-        left: -3.8889vh;
-        z-index: -1;
-        margin-top: .2778vh;
-        font-size: 5.0926vh;
-      }
-
-      .YORENOV-hud__cash #YORENOV-cash__value {
-        font-weight: 900;
-        display: inline-block;
-        letter-spacing: .2778vh;
-        font-style: normal;
-        font-size: 7.5vh;
-        font-family: SAfonts!important;
-      }
-
- 
-       .Old-Param-Progress, .Old-Progress__Values {
-         display: flex;
-        align-items: center;
-      }
-      .Old-Param-Progress {
-        width: 16.2037vh;
+.Old-Fixed-Param.armour, .Old-Param-Values {
+    margin-left: .93vh;
+}
+.Old-Param-Progress, .Old-Progress__Values {
+  width: 16.2037vh;
         height: 1.1111vh;
         box-shadow: #000 0 0 0 .4167vh;
       }
-
-      .Old-Progress__Values {
-           display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 3.6444vh;
-        top: 9.3148vh;
-        margin-left: 1vh;
-        justify-content: flex-end;
-        height: 9.1852vh;
-        padding-bottom: 1vh;
+.Old-Progress__Values {
+  height: 1.1111vh;
       }
 
-      .Old-Param-Value {
-        opacity: 1;
-      }
-
-      .Old-Param-Values {
-        opacity: 0;
+.Old-Param-Values {
+     opacity: 0;
         width: 4.6296vh;
         color: #fff;
         font-size: 1.6667vh;
@@ -487,36 +474,7 @@ justify-content: center;
         justify-content: center;
         text-align: center;
       }
-.Old-Fixed-Param.health {
-    margin-top: 0;
-    margin-left: 1.45vh;
-}
-.Old-Fixed-Param.armour, .Old-Param-Values {
-    margin-left: 1vh;
-}
-    .Old-Param-Progress, .Old-Progress__Values {
-    width: 16.2037vh;
-    height: 1.1111vh;
-    box-shadow: #000 0 0 0 .4167vh;
-      }
-.Old-Progress__Values {
- height: 1.1111vh;
-      }
-.Old-Progress__Values .circle {
-    width: .85vh;
-    height: .93vh;
-    margin-top: -.25vh;
-    margin-right: -.28vh;
-}
-.Old-Param-Values {
-    font-family: "GothamPro Light Italic";
-    font-weight: 300;
-    font-style: italic;
-    color: white;
-    width: 3.24vh;
-    font-size: 1.67vh;
-    text-shadow: 0 0 .46vh #000000b3;
-}
+
 .Old-Fixed-Freeze_text {
     margin-right: 1vh;
 }
