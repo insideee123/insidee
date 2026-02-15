@@ -418,12 +418,19 @@ justify-content: center;
 }
       .Old-Fixed-Cash {
         position: absolute;
+        right: 8.8889vh;
+        top: 16.0185vh;
+        transform: scale(1,.85);
+        display: inline-flex;
+        align-items: center;
+      }
+        .Old-Fixed-Cash .Old-Fixed-cash__value {
+        position: absolute;
         content: "j";
-        color: #36662c;
-        font-family: 'GothamPro Black Italic';
+        font-family: ALSRubl;
         left: -3.8889vh;
         z-index: -1;
-        margin-top: 3vh;
+        margin-top: .2778vh;
         font-size: 5.0926vh;
       }
 
@@ -432,13 +439,15 @@ justify-content: center;
         flex-direction: column;
         position: absolute;
         right: 3.6444vh;
-        top: 15.3148vh;
+        top: 10.3148vh;
         justify-content: flex-end;
         height: 9.1852vh;
         padding-bottom: .7407vh;
       }
-
-
+      .Old-Fixed-Param {
+      display: flex;
+      align-items: center;
+      }
       .Old-Param-Progress {
         width: 16.2037vh;
         height: 1.1111vh;
@@ -446,10 +455,10 @@ justify-content: center;
       }
 
       .Old-Progress__Values {
-        height: 2.1111vh;
+        height: 1.1111vh;
       }
 
-      .Old-show-values Old-Param-Values {
+      .Old-Param-Value {
         opacity: 1;
       }
 
