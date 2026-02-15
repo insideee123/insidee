@@ -488,7 +488,7 @@ YORENOV-hud__cash #YORENOV-cash__value,.YORENOV-hud__cash #YORENOV-cash__value::
       }
 
       .show-values Old-Param-Values {
-        opacity: 1;
+        opacity: 3;
       }
 
       Old-Param-Values {
