@@ -442,7 +442,10 @@ body #app .hud-radmir-info { display: none; }
     position: relative;
     z-index: 1;
 }
-
+        .Old-Fixed-Cash {
+        color: #36662c;
+        text-shadow: 0 -.463vh 0 #000300,0 -.463vh 0 #000300,0 .463vh 0 #000300,0 .463vh 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.0926vh -.463vh 0 #000300,.0926vh -.463vh 0 #000300,-.0926vh .463vh 0 #000300,.0926vh .463vh 0 #000300,-.463vh -.0926vh 0 #000300,.463vh -.0926vh 0 #000300,-.463vh .0926vh 0 #000300,.463vh .0926vh 0 #000300,-.1852vh -.463vh 0 #000300,.1852vh -.463vh 0 #000300,-.1852vh .463vh 0 #000300,.1852vh .463vh 0 #000300,-.463vh -.1852vh 0 #000300,.463vh -.1852vh 0 #000300,-.463vh .1852vh 0 #000300,.463vh .1852vh 0 #000300,-.2778vh -.463vh 0 #000300,.2778vh -.463vh 0 #000300,-.2778vh .463vh 0 #000300,.2778vh .463vh 0 #000300,-.463vh -.2778vh 0 #000300,.463vh -.2778vh 0 #000300,-.463vh .2778vh 0 #000300,.463vh .2778vh 0 #000300,-.3704vh -.463vh 0 #000300,.3704vh -.463vh 0 #000300,-.3704vh .463vh 0 #000300,.3704vh .463vh 0 #000300,-.463vh -.3704vh 0 #000300,.463vh -.3704vh 0 #000300,-.463vh .3704vh 0 #000300,.463vh .3704vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300;
+      }
 .Old-Fixed-Cash {
         position: absolute;
         right: 8.8889vh;
@@ -453,20 +456,22 @@ body #app .hud-radmir-info { display: none; }
         font-weight: 900;
         display: inline-block;
         letter-spacing: .2778vh;
-        color: #36662c;
         font-style: normal;
         font-size: 7.5vh;
         font-family: SAfonts!important;
       }
         
 .Old-Fixed-Param {
-        display: column;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 4.6444vh;
+        top: 7.3148vh;
+        justify-content: flex-end;
+        height: 9.1852vh;
+        padding-bottom: .7407vh;
       }
-.Old-Fixed-Param.health {
-    margin-top: 0;
-    margin-left: 1.45vh;
-}
+
 .Old-Fixed-Param.armour, .Old-Param-Values {
     margin-left: .93vh;
 }
