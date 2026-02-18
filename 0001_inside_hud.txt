@@ -444,6 +444,12 @@ body #app .hud-radmir-info { display: none; }
 }
 
 .Old-Fixed-Cash {
+        position: absolute;
+        right: 8.8889vh;
+        top: 16.0185vh;
+        transform: scale(1,.85);
+        display: inline-flex;
+        align-items: center;
         font-weight: 900;
         display: inline-block;
         letter-spacing: .2778vh;
@@ -454,7 +460,7 @@ body #app .hud-radmir-info { display: none; }
       }
         
 .Old-Fixed-Param {
-        display: flex;
+        display: column;
         align-items: center;
       }
 .Old-Fixed-Param.health {
