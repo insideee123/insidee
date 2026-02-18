@@ -422,7 +422,7 @@ body #app .hud-radmir-info { display: none; }
         justify-content: center;
       }
 .Ammo-in-clip {
-    font-family: 'SAfonts';
+    font-family: SAfonts!important;
     font-weight: 900;
     font-style: italic;
     font-size: 2.31vh;
@@ -430,7 +430,7 @@ body #app .hud-radmir-info { display: none; }
     text-shadow: 0 0 .46vh #00000080;
 }
 .Ammo-full {
-    font-family: 'SAfonts';
+    font-family: SAfonts!important;
     font-weight: 300;
     font-style: italic;
     font-size: 1.67vh;
@@ -439,7 +439,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Params {
     height: 13vh;
     right: 0.5vh; // от правой стенки
-    top: 8.3vh; // высота баров
+    top: 7.5vh; // высота баров
     position: relative;
     z-index: 1;
 }
@@ -449,7 +449,7 @@ body #app .hud-radmir-info { display: none; }
       }
 .Old-Fixed-Cash {
         position: absolute;
-        right: 1.8889vh;
+        right: 4.8889vh;
         top: 7.0185vh;
         transform: scale(1,.85);
         display: inline-flex;
