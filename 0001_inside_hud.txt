@@ -472,9 +472,7 @@ body #app .hud-radmir-info { display: none; }
         padding-bottom: .7407vh;
       }
 
-.Old-Fixed-Param.armour, .Old-Param-Values {
-    margin-left: .93vh;
-}
+
 .Old-Param-Progress, .Old-Progress__Values {
         width: 16.2037vh;
         height: 1.1111vh;
