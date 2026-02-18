@@ -225,7 +225,7 @@ function AddHud() {
       }
 
       @font-face {
-        font-family:'GothamPro';src:url('https://raw.githubusercontent.com/fonts/GothamPro-BlackItalic/GothamPro-BlackItalic.ttf') format("truetype");font-weight:900;font-style:italic}
+        font-family:'GothamPro';src:url('https://raw.githubusercontent.com/Fonts-Limit/Fonts/refs/heads/main/GothamPro-BlackItalic.ttf') format("truetype");font-weight:900;font-style:italic}
       }
 
       @font-face {
@@ -249,7 +249,7 @@ function AddHud() {
       }
 
       @font-face {
-        font-family:'ALSRubl';src:url('https://raw.githubusercontent.com/s1ny/octocat/blob/master/fonts/ALSRubl.ttf') format("truetype");font-weight:400;font-style:normal}
+        font-family:'ALSRubl';src:url('https://github.com/s1ny/octocat/blob/master/fonts/ALSRubl.ttf') format("truetype");font-weight:400;font-style:normal}
       }
 
       @font-face {
@@ -451,6 +451,17 @@ justify-content: center;
     margin-top: 2vh;
 }
        .YORENOV-hud__params {
+        width: 16.2037vh;
+        height: 1.1111vh;
+        box-shadow: #000 0 0 0 .4167vh;
+      }
+
+      .YORENOV-param {
+        display: flex;
+        align-items: center;
+      }
+
+       .YORENOV-param__progress {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -459,18 +470,7 @@ justify-content: center;
         justify-content: flex-end;
         height: 9.1852vh;
         padding-bottom: .7407vh;
-      }
-
-      .YORENOV-param {
-        display: flex;
-        align-items: center;
-      }
-
-      .YORENOV-param__progress {
-        width: 16.2037vh;
-        height: 1.1111vh;
-        box-shadow: #000 0 0 0 .4167vh;
-      }
+        }
 
       .YORENOV-progress__value {
         height: 1.1111vh;
