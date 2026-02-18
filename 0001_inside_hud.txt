@@ -438,7 +438,7 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Params {
     height: 13vh;
-    top: 5vh;
+    top: 7vh;
     position: relative;
     z-index: 1;
 }
