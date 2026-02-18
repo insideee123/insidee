@@ -348,7 +348,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-HudTop {
     position: absolute;
     right: 1.4vw;
-    top: 3.4vh;
+    top: 5.4vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -442,7 +442,7 @@ body #app .hud-radmir-info { display: none; }
     position: relative;
     z-index: 1;
 }
-        .Old-Fixed-Cash {
+    .Old-Fixed-Cash {
         color: #36662c;
         text-shadow: 0 -.463vh 0 #000300,0 -.463vh 0 #000300,0 .463vh 0 #000300,0 .463vh 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.0926vh -.463vh 0 #000300,.0926vh -.463vh 0 #000300,-.0926vh .463vh 0 #000300,.0926vh .463vh 0 #000300,-.463vh -.0926vh 0 #000300,.463vh -.0926vh 0 #000300,-.463vh .0926vh 0 #000300,.463vh .0926vh 0 #000300,-.1852vh -.463vh 0 #000300,.1852vh -.463vh 0 #000300,-.1852vh .463vh 0 #000300,.1852vh .463vh 0 #000300,-.463vh -.1852vh 0 #000300,.463vh -.1852vh 0 #000300,-.463vh .1852vh 0 #000300,.463vh .1852vh 0 #000300,-.2778vh -.463vh 0 #000300,.2778vh -.463vh 0 #000300,-.2778vh .463vh 0 #000300,.2778vh .463vh 0 #000300,-.463vh -.2778vh 0 #000300,.463vh -.2778vh 0 #000300,-.463vh .2778vh 0 #000300,.463vh .2778vh 0 #000300,-.3704vh -.463vh 0 #000300,.3704vh -.463vh 0 #000300,-.3704vh .463vh 0 #000300,.3704vh .463vh 0 #000300,-.463vh -.3704vh 0 #000300,.463vh -.3704vh 0 #000300,-.463vh .3704vh 0 #000300,.463vh .3704vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300;
       }
@@ -466,11 +466,11 @@ body #app .hud-radmir-info { display: none; }
         align-items: center;
       }
 .Old-Fixed-Param.health {
-    margin-top: 3;
-    margin-left: 1.45vh;
+    margin-top: 0;
+    margin-left: 0vh;
 }
 .Old-Fixed-Param.armour, .Old-Param-Values {
-    margin-left: .93vh;
+    margin-left: 0vh;
 }
 .Old-Param-Progress, .Old-Progress__Values {
         width: 16.2037vh;
@@ -478,9 +478,8 @@ body #app .hud-radmir-info { display: none; }
         box-shadow: #000 0 0 0 .4167vh;
       }
 .Old-Progress__Values {
-    display: flex;
-    justify-content: flex-end;
-}
+        opacity: 1;
+      }
 .Old-Progress__Values .circle {
     width: .85vh;
     height: .93vh;
@@ -493,7 +492,7 @@ body #app .hud-radmir-info { display: none; }
         color: #fff;
         font-size: 1.6667vh;
         font-weight: 500;
-        margin-left: -5%;   // kyda dvigaetca bari
+        margin-left: 0%;   // kyda dvigaetca bari
         position: relative;
         display: flex;
         justify-content: center;
@@ -509,7 +508,13 @@ body #app .hud-radmir-info { display: none; }
     font-size: 2vh;
     text-shadow: 0 0 2vh #000;
 }
-
+.Old-Fixed-Param.hunger {
+    margin-left: .35vh;
+}
+.Old-Fixed-Param.breath {
+    margin-left: 3px;
+    display: none;
+}
 .Old-Fixed-Param.health .Old-Progress__Values {
     background-color: #5a0c0e;
     
