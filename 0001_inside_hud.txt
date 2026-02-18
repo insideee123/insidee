@@ -449,7 +449,7 @@ body #app .hud-radmir-info { display: none; }
       }
 .Old-Fixed-Cash {
         position: absolute;
-        right: 2.8889vh;
+        right: 1.8889vh;
         top: 7.0185vh;
         transform: scale(1,.85);
         display: inline-flex;
@@ -931,6 +931,316 @@ background-size: auto 100vh;
         height: 8.2vh;
         padding-left: 9vh;
         padding-top: 2vh;
+      }
+
+      #app .quests-progress-info__text {
+        margin-top: .3vh;
+        padding-top: 0;
+        text-shadow: none;
+        display: none;
+      }
+
+      #app .quests-progress-info__title:before {
+        content: "Задание:";
+        padding-right: .463vh;
+      }
+
+      #app .quests-progress-info__progress,#app .quests-progress-info__text,#app .quests-progress-info__title-text,#app .quests-progress-info__title:before {
+        text-align: left;
+        color: #000;
+        font-family: var(--font-famaly-all);
+        font-weight: 500;
+        font-size: 1.2vh;
+        line-height: 130%;
+      }
+
+      #app .quests-progress-info__title-text,#app .quests-progress-info__title:before {
+        font-weight: 600;
+        font-size: 1.3vh;
+      }
+
+      #app .quests-progress-info__title {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: .3vh;
+      }
+
+      #app .quests-progress-info__progress {
+        text-shadow: none;
+      }
+
+      #app .trade {
+        width: 32.28vh;
+        height: 40vh;
+        border-radius: 0;
+        background: #323232;
+        padding: .8vh;
+        min-height: 40vh;
+      }
+
+      #app .trade__title {
+        position: absolute;
+        width: 32.28vh;
+        text-align: center;
+        background: #0d99cc;
+        font-family: BankGothic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.0370vh;
+        line-height: 1.2963vh;
+        text-transform: lowercase;
+        padding: .8333vh 0;
+        top: 0;
+        left: 0;
+      }
+
+      #app .trade__attention,#app .trade__button .text,#app .trade__card-button .text {
+        font-size: 1.4815vh;
+        font-family: BankGothic;
+        font-style: normal;
+        transform: scale(1,1.5);
+      }
+
+      #app .modal__close[data-v-85eb9678],#app .trade__close {
+        z-index: 2;
+        top: .5vh;
+        right: 1vh;
+        background: url(${window.yorenovSampHud.hud.close_55ec58fa}) center;
+        width: 2vh;
+        height: 2vh;
+      }
+
+      #app .trade__attention {
+        background: 0 0;
+        line-height: 1.3889vh;
+        text-transform: lowercase;
+        padding: 0;
+        text-align: left;
+        color: #ebebeb;
+        text-shadow: .0926vh .1852vh 0 rgba(0,0,0,.25);
+        margin-top: 6vh;
+        border-radius: 0;
+      }
+
+      #app .trade__button-container {
+        position: absolute;
+        bottom: -3.8vh;
+        margin-top: 0;
+        width: 32.28vh;
+        left: 0;
+      }
+
+      #app .trade__button {
+        width: 32.28vh;
+        background: #0d99cc;
+        padding: 1vh 0;
+        height: auto;
+        border-radius: 0;
+      }
+
+      #app .trade__button .text,#app .trade__card-button .text {
+        line-height: 1.2963vh;
+        text-transform: uppercase;
+      }
+
+      #app .trade__button:hover {
+        box-shadow: none;
+        color: #f7c822;
+      }
+
+      #app .modal__cards[data-v-85eb9678] {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 2vh;
+        flex-wrap: nowrap;
+      }
+
+      #app .modal__card-data[data-v-85eb9678],#app .stall__goods-list__row .price {
+        margin-top: 0;
+      }
+
+      #app .modal__card[data-v-85eb9678] {
+        background: 0 0;
+        text-align: left;
+        border-radius: 0;
+        padding: .2vh 0;
+        height: 3vh;
+        width: 100%;
+      }
+
+      #app .modal__card[data-v-85eb9678]:hover {
+        box-shadow: none;
+        transform: scale3d(1,1,1);
+        background-color: var(--item-select-active);
+      }
+
+      #app .modal__card-data[data-v-85eb9678] .title:before {
+        content: "-";
+        margin-left: .5vh;
+        margin-right: .2vh;
+      }
+
+      #app .modal[data-v-85eb9678] {
+        border-radius: 0;
+        background-color: var(--add-bg);
+        padding: 0;
+      }
+
+      #app .modal__input[data-v-85eb9678] {
+        margin: 4vh 1.85vh 0;
+        border-radius: .9259vh;
+        background-color: #000;
+        border: .1852vh solid #fff;
+      }
+
+      #app .modal__input[data-v-85eb9678].error {
+        border: .1852vh solid red;
+      }
+
+      #app .modal__input[data-v-85eb9678] input {
+        line-height: 3vh;
+        font-weight: 500;
+        font-size: 1.11vh;
+      }
+
+      #app .modal__input[data-v-85eb9678] input::placeholder {
+        color: #949494;
+      }
+
+      #app .modal__input[data-v-85eb9678] svg {
+        margin-left: -.5741vh;
+      }
+
+      #app .modal__button[data-v-85eb9678] {
+        min-width: 1vh;
+        background-color: #000!important;
+        color: #fff!important;
+        border-radius: .9259vh;
+        padding: .1vh 1.4vh .2vh;
+        line-height: 2.5vh;
+        font-weight: 500;
+        font-size: 1.11vh;
+        text-transform: capitalize;
+        border: .1852vh solid #fff;
+        margin-top: 1vh 1.85vh 1.85vh;
+      }
+
+      #app .modal__button[data-v-85eb9678]:hover {
+        border: .1852vh solid #85171a;
+        transform: translate(.2778vh,-.2778vh);
+        background-color: #000!important;
+        color: #fff!important;
+        box-shadow: none;
+      }
+
+      #app .buy-car-number .number-types,#app .modal__card-data[data-v-85eb9678] .title {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #app .modal__title[data-v-85eb9678] {
+        background-color: var(--add-bg-2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-indent: .7407vh;
+        padding: .4vh 0 .4vh 1.85vh;
+      }
+
+      #app .modal__cards-container[data-v-85eb9678] {
+        padding: 2vh 1.85vh 1.85vh;
+      }
+
+      #app .modal__close[data-v-85eb9678] {
+        z-index: 7;
+      }
+
+      #app .trade__card-image img {
+        width: 15vh;
+      }
+
+      #app .trade__card-image {
+        background: 0 0;
+        width: auto!important;
+        border: .2778vh solid #0d99cc;
+        height: auto;
+        margin: -1.5vh 0 0;
+      }
+
+      #app .trade__card.trade__card_player .trade__card-image {
+        margin-top: 2vh;
+      }
+
+      #app .trade__card.you .trade__card-values {
+        margin-bottom: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #app .trade__card {
+        background: #323232;
+        border-radius: 0;
+        padding: 0;
+        height: 40vh;
+      }
+
+      #app .trade__card-button .text,#app .trade__card-button.wait,#app .trade__card-name,#app .trade__card-text,#app .trade__card-value,#app .trade__card_player .trade__card-button {
+        font-family: BankGothic;
+        font-size: 1.4815vh!important;
+        font-weight: 400!important;
+        line-height: 1.3889vh;
+        text-transform: lowercase;
+        transform: scale(1,1.5);
+        color: #ebebeb;
+        text-shadow: .0926vh .1852vh 0 rgb(0 0 0 / 25%);
+      }
+
+      #app .trade__card.you .trade__card-text {
+        margin-bottom: -9vh;
+      }
+
+      #app .trade__card-values>div,#app .trade__card.you>div:nth-child(2) {
+        margin: 0!important;
+      }
+
+      #app .trade__card-values>div:first-child {
+        margin-bottom: 2vh!important;
+      }
+
+      #app .trade__card-name {
+        margin-top: -4vh;
+      }
+
+      #app .trade__card-data .data {
+        margin-top: 3vh;
+        padding: 0 1.5vh;
+      }
+
+      #app .trade__card-value {
+        margin-bottom: 3vh;
+        margin-top: 0;
+      }
+
+      #app .trade__card-value .title,#app .trade__card-value .value {
+        margin: 0;
+      }
+
+      #app .trade__card-value.redo img {
+        width: 2.1vh;
+      }
+
+      #app .trade__card.you:before {
+        content: "Ваша сторона";
+        left: 0;
+      }
+
+      #app .trade__card.trade__card_player:before {
+        content: "Другая сторона";
+        right: 0;
       }
 
       #app .trade__card.trade__card_player:before,#app .trade__card.you:before {
