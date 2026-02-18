@@ -453,17 +453,6 @@ body #app .hud-radmir-info { display: none; }
         font-family: SAfonts!important;
       }
         
-
-.Old-Fixed-Params__all {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 4.6444vh;
-        top: 7.3148vh;
-        justify-content: flex-end;
-        height: 9.1852vh;
-        padding-bottom: .7407vh;
-      }
 .Old-Fixed-Param {
     display: flex;
     align-items: center;
