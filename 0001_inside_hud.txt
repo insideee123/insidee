@@ -357,7 +357,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Logo {
         position: absolute;
         top: 1vh;
-        right: 4.7222vh;
+        right: 3.7222vh;
         transform-origin: top right;
       }
 .Old-Fixed-Logo img {
@@ -416,7 +416,7 @@ body #app .hud-radmir-info { display: none; }
         color: #c8e0fa;
         width: 18.5185vh;
     font-style: normal;
-    font-size: 7.5vh;
+    font-size: 2.5vh;
     font-family: PricedownRus !important;
     line-height: 1;
     text-shadow: 0 0 .46vh #00000080;
