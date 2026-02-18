@@ -1362,7 +1362,7 @@ body .authorization{background:0 0}#app .authorization{background-image:url("dat
             const progressBar = paramElement.querySelector(".Old-Progress__Values");
             const valueText = paramElement.querySelector(".Old-Param-Values");
             progressBar.style.width = `${value}%`;
-            valueText.textContent = value;
+            valueText.textContent = "100" + value;
         }
     }
 
