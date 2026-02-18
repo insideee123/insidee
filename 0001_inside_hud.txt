@@ -396,7 +396,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Weapon {
         position: absolute;
         top: 4.537vh;
-        right: 26.6667vh;
+        right: 24.6667vh;
       }
 
 .Old-Fixed-Weapon_back {
@@ -438,6 +438,7 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Params {
     height: 13vh;
+    right: 5vh;
     top: 8vh; // высота баров
     position: relative;
     z-index: 1;
