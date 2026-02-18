@@ -485,7 +485,7 @@ body #app .hud-radmir-info { display: none; }
         color: #fff;
         font-size: 1.6667vh;
         font-weight: 500;
-        margin-left: 0%;  /**куда двигаются бары**\
+        margin-left: 2%;  /**куда двигаются бары**\
         position: relative;
         display: flex;
         justify-content: center;
