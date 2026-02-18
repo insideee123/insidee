@@ -463,6 +463,7 @@ body #app .hud-radmir-info { display: none; }
         
 .Old-Fixed-Param {
         display: flex;
+        margin-top: 2vh;
         align-items: center;
       }
 .Old-Fixed-Param.health {
