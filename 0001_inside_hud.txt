@@ -512,10 +512,15 @@ body #app .hud-radmir-info { display: none; }
       }
 
 .Old-Fixed-Params {
-    height: 13vh;
-    position: relative;
-    z-index: 1;
-}
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 4.6444vh;
+        top: 7.3148vh;
+        justify-content: flex-end;
+        height: 9.1852vh;
+        padding-bottom: .7407vh;
+      }
 .Old-Fixed-Cash {
     justify-content: flex-end;
     color: white;
@@ -531,17 +536,10 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Params__all {
     margin-top: 1vh;
 }
-.Old-Fixed-Param {
+.Old-Fixed-Param {   /***высота баров***\
        display: flex;
-        align-items: center;
+        align-items: absolute;
       }
-.Old-Fixed-Param.health {
-    margin-top: 0;
-    margin-left: 1.45vh;
-}
-.Old-Fixed-Param.armour, .Old-Param-Values {
-    margin-left: .93vh;
-}
 .Old-Param-Progress, .Old-Progress__Values {
         width: 16.2037vh;
         height: 1.1111vh;
