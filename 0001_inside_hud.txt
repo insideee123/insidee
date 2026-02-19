@@ -616,6 +616,9 @@ body #app .hud-radmir-info { display: none; }
       body .OLD-RADMIR-logo__bonus {
     background: #000000c5
 }
+          .capture-table__col-kills,.capture-table__col-kills.my,.capture-table__timer {
+        background-image: none!important;
+      }
 
 /*----- JS INSIDE -----*/
 background-size: auto 100vh;
