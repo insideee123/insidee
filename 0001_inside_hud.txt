@@ -1339,6 +1339,14 @@ background-size: auto 100vh;
           </div>
         </div>
       </div>
+      <div class="Old-Fixed-Cash">
+    <span class="cash-overlay">
+        <span class="cash-icon">P</span>
+        <span class="cash-value">00000000</span>
+    </span>
+  </div>
+ </div>
+</div>
     `;
         document.body.appendChild(hudElement);
         hudElements.push(hudElement);
