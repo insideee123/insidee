@@ -499,12 +499,13 @@ body #app .hud-radmir-info { display: none; }
     margin-right: -.28vh;
 }
 .Old-Param-Values {
-    font-family: "GothamPro Light Italic";
+    font-family: SAfonts;
     font-weight: 300;
-    font-style: italic;
+    font-style: normal;
     color: white;
     width: 4.6296vh;
     text-align: center;
+    justify-content: center;
     font-size: 1.67vh;
     text-shadow: 0 0 .46vh #000000b3;
 }
