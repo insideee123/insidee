@@ -447,8 +447,7 @@ body #app .hud-radmir-info { display: none; }
         color: #36662c;
         text-shadow: 0 -.463vh 0 #000300,0 -.463vh 0 #000300,0 .463vh 0 #000300,0 .463vh 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.463vh 0 0 #000300,.463vh 0 0 #000300,-.0926vh -.463vh 0 #000300,.0926vh -.463vh 0 #000300,-.0926vh .463vh 0 #000300,.0926vh .463vh 0 #000300,-.463vh -.0926vh 0 #000300,.463vh -.0926vh 0 #000300,-.463vh .0926vh 0 #000300,.463vh .0926vh 0 #000300,-.1852vh -.463vh 0 #000300,.1852vh -.463vh 0 #000300,-.1852vh .463vh 0 #000300,.1852vh .463vh 0 #000300,-.463vh -.1852vh 0 #000300,.463vh -.1852vh 0 #000300,-.463vh .1852vh 0 #000300,.463vh .1852vh 0 #000300,-.2778vh -.463vh 0 #000300,.2778vh -.463vh 0 #000300,-.2778vh .463vh 0 #000300,.2778vh .463vh 0 #000300,-.463vh -.2778vh 0 #000300,.463vh -.2778vh 0 #000300,-.463vh .2778vh 0 #000300,.463vh .2778vh 0 #000300,-.3704vh -.463vh 0 #000300,.3704vh -.463vh 0 #000300,-.3704vh .463vh 0 #000300,.3704vh .463vh 0 #000300,-.463vh -.3704vh 0 #000300,.463vh -.3704vh 0 #000300,-.463vh .3704vh 0 #000300,.463vh .3704vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300,-.463vh -.463vh 0 #000300,.463vh -.463vh 0 #000300,-.463vh .463vh 0 #000300,.463vh .463vh 0 #000300;
       }
-
-.YORENOV-hud__cash {
+.Old-Fixed-Cash {
         position: absolute;
         right: 4.8889vh;
         top: 7.0185vh;
@@ -463,34 +462,6 @@ body #app .hud-radmir-info { display: none; }
         font-family: SAfonts!important;
       }
         
-      
-       .Old-Fixed-Cash {
-        position: absolute;
-        right: 8.8889vh;
-        top: 16.0185vh;
-        transform: scale(1,.85);
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .YORENOV-hud__cash #YORENOV-cash__value::before {
-        position: absolute;
-        content: "j";
-        font-family: ALSRubl;
-        left: -3.8889vh;
-        z-index: -1;
-        margin-top: .2778vh;
-        font-size: 5.0926vh;
-      }
-
-      .YORENOV-hud__cash #YORENOV-cash__value {
-        font-weight: 900;
-        display: inline-block;
-        letter-spacing: .2778vh;
-        font-style: normal;
-        font-size: 7.5vh;
-        font-family: SAfonts!important;
-      }
 .Old-Fixed-Param {
         display: flex;
         margin-top: 0.5vh; // между баров
@@ -1428,14 +1399,6 @@ background-size: auto 100vh;
             const moneyEl = document.querySelector(".Old-Fixed-Cash span");
             if (moneyEl) moneyEl.textContent = formatNumberWithDots(value);
         },
-          money: (value) => {
-            const moneyEl = document.querySelector(".YORENOV-hud__cash #YORENOV-cash__value::before span");
-            if (moneyEl) moneyEl.textContent = formatNumberWithDots(value);
-        },
-          money: (value) => {
-            const moneyEl = document.querySelector(".YORENOV-hud__cash #YORENOV-cash__value span");
-            if (moneyEl) moneyEl.textContent = formatNumberWithDots(value);
-        },
         wanted: (value) => {
             const wantedIcons = document.querySelectorAll(".Wanted_row img");
             for (let i = 0; i < wantedIcons.length; i++) {
@@ -1570,6 +1533,7 @@ AddHud();
     customZone.style.cssText = `
         position: absolute;
         transform-origin: bottom right;
+        display: none;
         right: 8vh;
         bottom: 5vh;
         transition: .35s;
