@@ -467,7 +467,7 @@ body #app .hud-radmir-info { display: none; }
         font-family: ALSRubl;
         left: -3.8889vh;
         z-index: -1;
-        margin-top: -1vh;
+        margin-top: -5vh;
         font-size: 5.0926vh;
       }
         
@@ -1517,22 +1517,21 @@ background-size: auto 100vh;
 AddHud();
 
 
-let lastMoneyValue = null;
-
-// "₽2.571" / "P2.571" / "2.571" -> 2571
-function extractNumber(text) {
+function formatTo8DigitsFromCash(text) {
     if (!text) return null;
-    const digits = text.replace(/[^\d]/g, '');
-    return digits ? parseInt(digits, 10) : null;
-}
 
-// сохраняем символ + делаем 8 знаков
-function formatMoney(text, num) {
+    // сохраняем символ валюты (₽, P и т.п.)
     const symbolMatch = text.match(/^[^\d]+/);
     const symbol = symbolMatch ? symbolMatch[0] : '';
 
-    const s = num.toString();
-    const padded = s.length >= 8 ? s : s.padStart(8, '0');
+    // вытаскиваем число: "₽2.571" -> "2571"
+    const digits = text.replace(/[^\d]/g, '');
+    if (!digits) return null;
+
+    const padded =
+        digits.length >= 8
+            ? digits
+            : digits.padStart(8, '0');
 
     return symbol + padded;
 }
@@ -1541,26 +1540,16 @@ setInterval(() => {
     const cashEl = document.querySelector('.Old-Fixed-Cash');
     if (!cashEl) return;
 
-    const rawText = cashEl.textContent.trim();
-    if (!rawText) return;
+    const raw = cashEl.textContent.trim();
+    if (!raw) return;
 
-    const currentNumber = extractNumber(rawText);
-    if (currentNumber === null) return;
+    const formatted = formatTo8DigitsFromCash(raw);
+    if (!formatted) return;
 
-    // ✅ ВАЖНО: инициализация при первом запуске
-    if (lastMoneyValue === null) {
-        lastMoneyValue = currentNumber;
-        cashEl.textContent = formatMoney(rawText, currentNumber);
-        return;
-    }
-
-    // если число не изменилось — ничего не делаем
-    if (currentNumber === lastMoneyValue) return;
-
-    // обновление при покупке / получении денег
-    lastMoneyValue = currentNumber;
-    cashEl.textContent = formatMoney(rawText, currentNumber);
+    // всегда перезаписываем тем, что посчитали
+    cashEl.textContent = formatted;
 }, 100);
+
 
 
 
