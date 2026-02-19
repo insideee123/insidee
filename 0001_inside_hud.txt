@@ -1,6 +1,6 @@
 window.yorenovHud = window.yorenovHud || {};
 yorenovHud.logoChanger = {
-data: {
+        data: {
             defaultLogo: "yorenov-logo-1",
             logo: "",
             prevLogo: "",
@@ -150,7 +150,7 @@ data: {
             this.data.logo = this.data.defaultLogo;
             this.changeHudLogo(this.data.logo);
         }
-    },
+    };
 function AddHud() {
     let hudStyleElement;
     let loadingNotification;
@@ -1926,10 +1926,17 @@ function updateParam(paramClass, value) {
     initializeHudProxy();
     window.onInfoChange = onInfoChange;
 }
-document.addEventListener("DOMContentLoaded", () => {
-    AddHud();
-    yorenovHud.logoChanger.init();
-});
+AddHud();
+
+setTimeout(() => {
+    if (window.yorenovHud && yorenovHud.logoChanger) {
+        yorenovHud.logoChanger.init();
+        console.log("logoChanger запущен");
+    } else {
+        console.error("logoChanger не найден");
+    }
+}, 1000);
+;
 
 
 (function () {
