@@ -502,16 +502,16 @@ body #app .hud-radmir-info { display: none; }
     margin-right: -.28vh;
 }
 .Old-Param-Values {
-    font-family: SAfonts;
-        opacity: 1;
+        opacity: 0;
         width: 4.6296vh;
         color: #fff;
         font-size: 1.6667vh;
         font-weight: 500;
-        right: 9vh;
+        margin-left: -50%;
         position: relative;
         display: flex;
-        text-shadow: 0 0 .46vh #000000b3;
+        justify-content: center;
+        text-align: center;
       }
   
 .Old-Fixed-Freeze_text {
@@ -1482,7 +1482,7 @@ background-size: auto 100vh;
         transition: .35s;
       }
        #app .right-type .game-text--data .title {
-        font-family: BankGothicRUSSMedium!important;
+        font-family: SAfonts-Regular!important;
         font-size: 100%;
         text-transform: lowercase;
         text-align: right;
