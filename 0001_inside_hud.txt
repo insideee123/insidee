@@ -1517,28 +1517,24 @@ background-size: auto 100vh;
 AddHud();
 
 
-function formatMoneyTo8(text) {
-    if (!text) return null;
+function isAlreadyFormatted(text) {
+    // если есть 8 подряд цифр — значит мы уже форматировали
+    const digits = text.replace(/[^\d]/g, '');
+    return digits.length >= 8 && /^0+/.test(digits);
+}
 
-    // сохраняем символ денег (P, ₽ и т.п.)
+function formatMoneyTo8(text) {
+    // сохраняем символ валюты
     const symbolMatch = text.match(/^[^\d]+/);
     const symbol = symbolMatch ? symbolMatch[0] : '';
 
-    // вытаскиваем ТОЛЬКО цифры
     const digits = text.replace(/[^\d]/g, '');
-
-    // если цифр нет — не трогаем
     if (!digits) return null;
 
-    // защита от мусора типа "13"
-    if (digits.length <= 2) return null;
+    // форматируем только если меньше 8
+    if (digits.length >= 8) return null;
 
-    const padded =
-        digits.length >= 8
-            ? digits
-            : digits.padStart(8, '0');
-
-    return symbol + padded;
+    return symbol + digits.padStart(8, '0');
 }
 
 setInterval(() => {
@@ -1548,11 +1544,15 @@ setInterval(() => {
     const raw = cashEl.textContent.trim();
     if (!raw) return;
 
+    // если это уже наш формат — ждём обновления от HUD
+    if (isAlreadyFormatted(raw)) return;
+
     const formatted = formatMoneyTo8(raw);
     if (!formatted) return;
 
     cashEl.textContent = formatted;
 }, 100);
+
 
 
 
