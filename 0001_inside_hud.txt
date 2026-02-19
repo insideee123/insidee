@@ -1531,8 +1531,8 @@ AddHud();
          style="width: 30.3889vh; height: 13.8148vh;">
     `;
     customZone.style.cssText = `
-        position: absolute;
-        right = 5vh;
+        position: flex;
+        left = 5vh;
         bottom: 5vh;
         display: none;
         align-items: center;
