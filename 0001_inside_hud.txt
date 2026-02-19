@@ -508,7 +508,7 @@ body #app .hud-radmir-info { display: none; }
         color: #fff;
         font-size: 1.6667vh;
         font-weight: 500;
-        right: 8vh;
+        right: 9vh;
         position: relative;
         display: flex;
         text-shadow: 0 0 .46vh #000000b3;
