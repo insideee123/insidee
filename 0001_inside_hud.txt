@@ -1800,6 +1800,7 @@ background-size: auto 100vh;
           </div>
         </div>
       </div>
+    </div>
       <div style="display: none" class="YORENOV-speedometer__tachometer">
         <img class="YORENOV-tachometer__arrow" src="${window.yorenovSampHud.hud.speedometer.arrow}" alt="">
         <div class="YORENOV-tachometer__data">
