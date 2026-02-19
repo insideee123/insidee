@@ -42,25 +42,18 @@ function attachLogoChanger() {
 
                 window.sendClientEvent = new Proxy(window.sendClientEvent, {
                     apply: (target, thisArg, args) => {
-                        try {
-                            if (args.includes("OnDialogResponse") && window.isFakeDialog) {
-                                window.sendClientEvent = this.data.originalSendClientEvent;
-                                window.addDialogInQueue = this.data.originalAddDialogInQueue;
-                                this.data.originalSendClientEvent = null;
-                                this.data.originalAddDialogInQueue = null;
+                        if (args.includes("OnDialogResponse") && window.isFakeDialog) {
+                            window.sendClientEvent = this.data.originalSendClientEvent;
+                            window.addDialogInQueue = this.data.originalAddDialogInQueue;
+                            this.data.originalSendClientEvent = null;
+                            this.data.originalAddDialogInQueue = null;
 
-                                if (args[3] === 0) s();
-                                if (args[3] === 1) {
-                                    i(
-                                        args[5]
-                                            .replace(/<[^>]*>/g, "")
-                                            .trim()
-                                    );
-                                }
-                                return false;
+                            if (args[3] === 1) {
+                                i(args[5].replace(/<[^>]*>/g, "").trim());
+                            } else {
+                                s();
                             }
-                        } catch (err) {
-                            yorenovHud.addChatMessage(`Ошибка диалога: ${err}`);
+                            return false;
                         }
                         return Reflect.apply(target, thisArg, args);
                     },
@@ -98,23 +91,18 @@ function attachLogoChanger() {
                 "Закрыть",
                 optionsString,
                 (selected) => {
-                    if (selected === "Первый") {
-                        this.changeHudLogo("yorenov-logo-1");
-                    } else if (selected === "Второй") {
-                        this.changeHudLogo("yorenov-logo-2");
-                    } else if (selected === "Третий") {
-                        this.changeHudLogo("yorenov-logo-3");
-                    }
+                    if (selected === "Первый") this.changeHudLogo("yorenov-logo-1");
+                    if (selected === "Второй") this.changeHudLogo("yorenov-logo-2");
+                    if (selected === "Третий") this.changeHudLogo("yorenov-logo-3");
                 }
             );
         },
 
         init() {
-            this.data.logo = this.data.defaultLogo;
-            this.changeHudLogo(this.data.logo);
+            this.changeHudLogo(this.data.defaultLogo);
         }
     };
-};
+}
 
 function AddHud() {
     let hudStyleElement;
@@ -1892,12 +1880,19 @@ function updateParam(paramClass, value) {
     window.onInfoChange = onInfoChange;
 }
 AddHud();
-attachLogoChanger();
-yorenovHud.logoChanger.init();
 
-yorenovHud.chat.registerCommand("/changelogo", () => {
-    yorenovHud.logoChanger.showChangeLogoDialog();
-});
+setTimeout(() => {
+    attachLogoChanger();
+    yorenovHud.logoChanger.init();
+
+    setTimeout(() => {
+        yorenovHud.chat.registerCommand("/changelogo", () => {
+            yorenovHud.logoChanger.showChangeLogoDialog();
+        });
+    }, 1000);
+
+}, 1000);
+
 
 
 
