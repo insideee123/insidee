@@ -461,6 +461,13 @@ body #app .hud-radmir-info { display: none; }
         font-size: 7.5vh;
         font-family: SAfonts!important;
       }
+        .Old-Fixed-Cash::before {
+    content: "₽";              
+    font-family: "ALSRubl";
+    font-size: 20px;
+    color: #36662c;
+    line-height: 1;
+}
         
 .Old-Fixed-Param {
         display: flex;
