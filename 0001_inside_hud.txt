@@ -407,8 +407,8 @@ body #app .hud-radmir-info { display: none; }
     z-index: -1;
 }
 .Old-Fixed-Weapon_icon {
-        height: 12.8704vh;
-        width: 12.8704vh;
+        height: 14.8704vh;
+        width: 14.8704vh;
       }
 .Old-Fixed-Weapon_ammo {
         position: absolute;
