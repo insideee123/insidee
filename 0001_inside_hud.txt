@@ -473,7 +473,7 @@ body #app .hud-radmir-info { display: none; }
         
 .Old-Fixed-Param {
         display: flex;
-        margin-top: 0.5vh; // между баров
+        margin-bottom: 6px; // между баров
         align-items: center;
       }
 .Old-Fixed-Param.health {
@@ -481,7 +481,8 @@ body #app .hud-radmir-info { display: none; }
     margin-left: 0vh;
 }
 .Old-Fixed-Param.armour, .Old-Param-Values {
-    margin-left: 0vh;
+        margin-top: 0;
+    top: auto;
 }
 .Old-Param-Progress, .Old-Progress__Values {
         width: 16.2037vh;
