@@ -597,56 +597,6 @@ body #app .hud-radmir-info { display: none; }
         display: flex;
       }
 
-      .YORENOV-digit-big {
-        width: 1.2037vh;
-        height: 1.2963vh;
-      }
-
-      .YORENOV-digit-small {
-        width: .9259vh;
-        height: .9259vh;
-      }
-
-      .YORENOV-digit-small.YORENOV-digit-1 {
-        width: .3704vh;
-        height: .9259vh;
-      }
-
-      .YORENOV-digit-big.YORENOV-digit-1 {
-        width: .5556vh;
-        height: 1.2963vh;
-      }
-
-      .YORENOV-digit-big.YORENOV-digit-3 {
-        width: 1.1111vh;
-        height: 1.2963vh;
-      }
-
-      .YORENOV-digit-big.YORENOV-digit-4,.YORENOV-digit-big.YORENOV-digit-6 {
-        width: 1.2963vh;
-        height: 1.2963vh;
-      }
-
-      @keyframes turn {
-        0% {
-          opacity: .5;
-        }
-
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes speed {
-        0% {
-          opacity: 0;
-        }
-
-        100% {
-          opacity: 1;
-        }
-      }
-
       .YORENOV-speedometer__turns {
         position: relative;
         top: 5.8333vh;
@@ -677,11 +627,6 @@ body #app .hud-radmir-info { display: none; }
         width: 13.8889vh;
       }
 
-      .YORENOV-speedometer-speed__data {
-        position: relative;
-        text-align: center;
-        bottom: 8.3333vh;
-      }
 
       .YORENOV-speedometer__params {
         display: flex;
@@ -789,10 +734,6 @@ body #app .hud-radmir-info { display: none; }
         margin-bottom: .3704vh;
       }
 
-      #app .dice-game__money:first-child,#app .login-form__input,.YORENOV-speedometer-fuel__value {
-        display: flex;
-        align-items: center;
-      }
 
       .YORENOV-speedometer-fuel__value>img:first-child {
         margin-right: .1852vh;
@@ -859,22 +800,6 @@ body #app .hud-radmir-info { display: none; }
         bottom: 2.4074vh;
         left: -12.6852vh;
       }
-
-      .YORENOV-tachometer__data {
-        position: relative;
-        text-align: center;
-        bottom: 7.4074vh;
-        width: 11.4815vh;
-        transform: scale(.86);
-      }
-
-      .YORENOV-tachometer__arrow {
-        transition: .2s;
-        transform: rotate(180deg);
-      }
-      body .OLD-RADMIR-logo__bonus {
-    background: #000000c5
-}
 
 /*----- JS INSIDE -----*/
 background-size: auto 100vh;
