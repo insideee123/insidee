@@ -467,7 +467,7 @@ body #app .hud-radmir-info { display: none; }
         font-family: ALSRubl;
         left: -3.8889vh;
         z-index: -1;
-        top: -0.2222vh;
+        top: .2778vh;
         font-size: 5.0926vh;
       }
         
@@ -1503,7 +1503,20 @@ money: (value) => {
                 createHud();
 
                 
-                const props = ['health', 'armour', 'hunger', 'breath', 'money', 'wanted', 'ammoInClip', 'totalAmmo', 'freeze', 'weapon', 'show'];
+                const props = [
+    'health',   
+    'hunger',   
+    'armour',   
+    'breath',
+    'money',
+    'wanted',
+    'ammoInClip',
+    'totalAmmo',
+    'freeze',
+    'weapon',
+    'show'
+];
+
                 props.forEach(prop => {
                     if (prop in hudInfo && updateFunctions[prop]) {
                         updateFunctions[prop](hudInfo[prop]);
