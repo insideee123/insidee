@@ -411,11 +411,10 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Weapon {
         position: absolute;
-         margin-left: auto;
-        margin-right: auto;
+background-position: center;
         top: 10.0vh;
         right: 2.2667vh;
-        background-color: #777777cc;
+        background-color: #000000cc;
         border-radius: 18px;
           height: 150px;
           width: 210px;
@@ -429,7 +428,7 @@ body #app .hud-radmir-info { display: none; }
         position: absolute;
         right: 2.5926vh;
         top: 10vh;
-        color: #9db0c5;
+        color: #000000;
         width: 18.5185vh;
         text-align: center;
         display: flex;
@@ -466,10 +465,9 @@ body #app .hud-radmir-info { display: none; }
 
 .Old-Fixed-Cash {
         position: absolute;
-        margin-left: auto;
-        margin-right: 5vh;
+background-position: center;
         right: 1.9vh;
-        top: 12.6vh;
+        top: 12.3vh;
         transform: scale(1,.85);
         display: inline-flex;
         align-items: center;
@@ -478,7 +476,7 @@ body #app .hud-radmir-info { display: none; }
     font-family: "GothamPro Black Italic";
     font-style: italic;
     font-size: 2.59vh;
-    background-color: #777777cc;
+    background-color: #000000cc;
     border-radius: 18px;
           height: 45px;
           width: 210px;
@@ -489,9 +487,9 @@ body #app .hud-radmir-info { display: none; }
         font-family: ALSRubl;
         font-style: normal;
     font-size: 2.59vh;
-        left: -3.8889vh;
+        left: -6.8889vh;
         z-index: -1;
-        top: .2778vh;
+        top: 1vh;
         font-size: 5.0926vh;
       }
         
@@ -584,12 +582,10 @@ display: none;
 
 .Old-Fixed-Wanted {
         position: absolute;
-        display: block;
-            margin-left: 5vh;
-    margin-right: auto;
         right: 6.0vh;
         top: 29.2852vh;
-          background-color: #777777cc;
+        background-position: center;
+          background-color: #000000cc;
           border-radius: 18px;
           height: 45px;
           width: 210px;
