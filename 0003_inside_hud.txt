@@ -470,12 +470,19 @@ body #app .hud-radmir-info { display: none; }
     font-family: "GothamPro Black Italic";
     font-style: italic;
     font-size: 2.59vh;
+              background-color: #000000cc;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  width: 160px;
     text-shadow: 0 0 .46vh #00000080;
 }
         .Old-Fixed-Cash::before {
         position: absolute;
         content: "j";
-        font-family: ALSRubl;
+        font-family: "GothamPro Black Italic";
+        font-style: normal;
+    font-size: 2.59vh;
         left: -3.8889vh;
         z-index: -1;
         top: .2778vh;
@@ -497,7 +504,7 @@ body #app .hud-radmir-info { display: none; }
 }
   // под барами, ширина длина баров
         .Old-Param-Progress, .Old-Progress__Values {
-display: none;
+display: flex;
       }
 .Old-Progress__Values {
         opacity: 1;
@@ -571,13 +578,13 @@ display: none;
 
 .Old-Fixed-Wanted {
         position: absolute;
-        right: 16.7037vh;
+        right: 8.7037vh;
         top: 22.6852vh;
-          background-color: #000000ab;
+          background-color: #000000cc;
           border-radius: 15px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 75px;
-  width: 240px;
+  height: 50px;
+  width: 160px;
 }
       }
 
@@ -586,8 +593,8 @@ display: none;
         flex-direction: row;
       }
 .Wanted_row img {
-        width: 2.5vh;
-        height: 2.5vh;
+        width: 2.8vh;
+        height: 2.8vh;
       }
 .Old-Fixed-HudBottom {
     transform-origin: right bottom;
