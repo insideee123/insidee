@@ -411,9 +411,10 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Weapon {
         position: absolute;
-       text-align: center;
+       
         top: 10.0vh;
         right: 2.2667vh;
+        text-align: center;
         background-color: #000000cc;
         border-radius: 18px;
           height: 150px;
@@ -466,10 +467,10 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Cash {
         position: absolute;
         right: 1.9vh;
-        top: 12vh;
+        top: 11,89vh;
         transform: scale(1,.85);
         display: inline-flex;
-        text-align: center;
+        align-items: center;
     justify-content: flex-end;
     color: white;
     font-family: "GothamPro Black Italic";
@@ -482,6 +483,7 @@ body #app .hud-radmir-info { display: none; }
 }
         .Old-Fixed-Cash::before {
         position: absolute;
+        text-align: center;
         content: "j";
         font-family: ALSRubl;
         font-style: normal;
