@@ -411,8 +411,8 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Weapon {
         position: absolute;
-        top: 4.537vh;
-        right: 4.6667vh;
+        top: 5.537vh;
+        right: 2.9667vh;
         background-color: #777777cc;
         border-radius: 18px;
           height: 150px;
@@ -464,7 +464,7 @@ body #app .hud-radmir-info { display: none; }
 
 .Old-Fixed-Cash {
         position: absolute;
-        right: 2.35vh;
+        right: 2.0vh;
         top: 8.3vh;
         transform: scale(1,.85);
         display: inline-flex;
