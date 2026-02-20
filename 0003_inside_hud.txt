@@ -460,8 +460,8 @@ body #app .hud-radmir-info { display: none; }
 
 .Old-Fixed-Cash {
         position: absolute;
-        right: 2.8389vh;
-        top: 4.3vh;
+        right: 6.0vh;
+        top: 5.6vh;
         transform: scale(1,.85);
         display: inline-flex;
         align-items: center;
@@ -470,11 +470,11 @@ body #app .hud-radmir-info { display: none; }
     font-family: "GothamPro Black Italic";
     font-style: italic;
     font-size: 2.59vh;
-              background-color: #000000cc;
-          border-radius: 15px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 50px;
-  width: 160px;
+    background-color: #000000cc;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 45px;
+    width: 200px;
     text-shadow: 0 0 .46vh #00000080;
 }
         .Old-Fixed-Cash::before {
@@ -504,7 +504,7 @@ body #app .hud-radmir-info { display: none; }
 }
   // под барами, ширина длина баров
         .Old-Param-Progress, .Old-Progress__Values {
-display: flex;
+display: none;
       }
 .Old-Progress__Values {
         opacity: 1;
@@ -579,12 +579,12 @@ display: flex;
 .Old-Fixed-Wanted {
         position: absolute;
         right: 6.0vh;
-        top: 21.6852vh;
+        top: 24.6852vh;
           background-color: #000000cc;
-          border-radius: 15px;
+          border-radius: 18px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 45px;
-  width: 190px;
+  width: 200px;
 }
       }
 
