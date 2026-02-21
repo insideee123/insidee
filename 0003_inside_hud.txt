@@ -411,7 +411,6 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Weapon {
         position: absolute;
-       
         top: 10.0vh;
         right: 2.2667vh;
         text-align: center;
@@ -432,9 +431,7 @@ body #app .hud-radmir-info { display: none; }
         color: #ffffff;
         width: 18.5185vh;
         text-align: center;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
+        display: block;
         justify-content: center;
         text-shadow: 0 -.1852vh 0 #000,0 -.1852vh 0 #000,0 .1852vh 0 #000,0 .1852vh 0 #000,-.1852vh 0 0 #000,.1852vh 0 0 #000,-.1852vh 0 0 #000,.1852vh 0 0 #000,-.0926vh -.1852vh 0 #000,.0926vh -.1852vh 0 #000,-.0926vh .1852vh 0 #000,.0926vh .1852vh 0 #000,-.1852vh -.0926vh 0 #000,.1852vh -.0926vh 0 #000,-.1852vh .0926vh 0 #000,.1852vh .0926vh 0 #000,-.1852vh -.1852vh 0 #000,.1852vh -.1852vh 0 #000,-.1852vh .1852vh 0 #000,.1852vh .1852vh 0 #000,-.1852vh -.1852vh 0 #000,.1852vh -.1852vh 0 #000,-.1852vh .1852vh 0 #000,.1852vh .1852vh 0 #000;
       
@@ -465,7 +462,7 @@ body #app .hud-radmir-info { display: none; }
 }
 
 .Old-Fixed-Cash {
-        position: absolute;
+        position: static;
         right: 1.9vh;
         top: 11,89vh;
         transform: scale(1,.85);
