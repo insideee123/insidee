@@ -356,7 +356,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Logo {
         position: absolute;
         top: 1vh;
-        right: 7.8222vh;
+        right: 7vh;
         transform-origin: top right;
             background-color: #000000cc;
     border-radius: 13px;
@@ -382,7 +382,7 @@ body #app .hud-radmir-info { display: none; }
        font-weight: 700;
        position: absolute;
        bottom: 1vh;
-       right: 2.5vh;
+       right: 1.8vh;
        border-radius: 50%;
        font-family:"GothamPro Black Italic";
        font-style:italic;
@@ -394,11 +394,11 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Main {
     margin-top: 2vh;
-    margin-right: 3.46vh;
+    margin-right: 3vh;
 }
 .Old-Fixed-Weapon {
         position: absolute;
-        top: 10.0vh;
+        top: 7.0vh;
         right: 4vh;
         text-align: center;
         background-color: #000000cc;
@@ -420,8 +420,6 @@ body #app .hud-radmir-info { display: none; }
         text-align: center;
         display: block;
         justify-content: center;
-        text-shadow: 0 -.1852vh 0 #000,0 -.1852vh 0 #000,0 .1852vh 0 #000,0 .1852vh 0 #000,-.1852vh 0 0 #000,.1852vh 0 0 #000,-.1852vh 0 0 #000,.1852vh 0 0 #000,-.0926vh -.1852vh 0 #000,.0926vh -.1852vh 0 #000,-.0926vh .1852vh 0 #000,.0926vh .1852vh 0 #000,-.1852vh -.0926vh 0 #000,.1852vh -.0926vh 0 #000,-.1852vh .0926vh 0 #000,.1852vh .0926vh 0 #000,-.1852vh -.1852vh 0 #000,.1852vh -.1852vh 0 #000,-.1852vh .1852vh 0 #000,.1852vh .1852vh 0 #000,-.1852vh -.1852vh 0 #000,.1852vh -.1852vh 0 #000,-.1852vh .1852vh 0 #000,.1852vh .1852vh 0 #000;
-      
       }
 .Ammo-in-clip {
     font-family: GothamPro Black Italic !important;
@@ -448,7 +446,7 @@ body #app .hud-radmir-info { display: none; }
     position: absolute;
     display: flex;     
     justify-content: center; 
-    top: 125px;
+    top: 95px;
     right: -1vh;
     color: #ffffff;
     font-family: "GothamPro Black Italic";
@@ -508,8 +506,8 @@ body #app .hud-radmir-info { display: none; }
     font-family: "GothamPro Black Italic";
     font-weight: 300;
     font-style: italic;
-    top: 5vh;
-    left: 4vh;
+    margin-top: 7vh;
+    margin-left: 4vh;
     color: white;
     width: 5.24vh;
     font-size: 1.37vh;
@@ -569,7 +567,7 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Wanted {
         position: absolute;
         right: 7.6vh;
-        top: 29.2852vh;
+        top: 26.2852vh;
         text-align: center;
           background-color: #000000cc;
           border-radius: 13px;
