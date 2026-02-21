@@ -462,15 +462,12 @@ body #app .hud-radmir-info { display: none; }
 }
 
 .Old-Fixed-Cash {
-    position: absolute;
-    display: flex;     
-    justify-content: center; 
-    top: 125px;
-    right: -1vh;
-    color: #ffffff;
+    justify-content: center;
+    color: white;
     font-family: "GothamPro Black Italic";
     font-style: italic;
-    font-size: 25px;
+    font-size: 2.59vh;
+    text-shadow: 0 0 .46vh #00000080;
     background-color: #000000cc;
     border-radius: 13px;
     height: 45px;
@@ -494,7 +491,7 @@ body #app .hud-radmir-info { display: none; }
         .Old-Param-Progress, .Old-Progress__Values {
         width: 7.2037vh;
         height: 1vh;
-        border-radius: 50px;
+        border-radius: 50vh;
         box-shadow: #000 0 0 0 .4167vh;
       }
 .Old-Progress__Values {
