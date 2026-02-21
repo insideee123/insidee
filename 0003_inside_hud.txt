@@ -201,15 +201,11 @@ function AddHud() {
         hudStyleElement = document.createElement("style");
         hudStyleElement.id = "hudStyles";
         hudStyleElement.innerHTML = `
-              .YORENOV-param__amount,.YORENOV-weapon__ammo #YORENOV-ammo__in-clip,.YORENOV-weapon__ammo #YORENOV-ammo__total {
-        text-shadow: 0 -.1852vh 0 #000,0 -.1852vh 0 #000,0 .1852vh 0 #000,0 .1852vh 0 #000,-.1852vh 0 0 #000,.1852vh 0 0 #000,-.1852vh 0 0 #000,.1852vh 0 0 #000,-.0926vh -.1852vh 0 #000,.0926vh -.1852vh 0 #000,-.0926vh .1852vh 0 #000,.0926vh .1852vh 0 #000,-.1852vh -.0926vh 0 #000,.1852vh -.0926vh 0 #000,-.1852vh .0926vh 0 #000,.1852vh .0926vh 0 #000,-.1852vh -.1852vh 0 #000,.1852vh -.1852vh 0 #000,-.1852vh .1852vh 0 #000,.1852vh .1852vh 0 #000,-.1852vh -.1852vh 0 #000,.1852vh -.1852vh 0 #000,-.1852vh .1852vh 0 #000,.1852vh .1852vh 0 #000;
-      }
-
-      #app .window[data-dialog-type="2"] .window-table__item:first-child,.YORENOV-param {
+      #app .window[data-dialog-type="2"] .window-table__item:first-child {
         margin-top: .463vh;
       }
 
-      #app .window .window__buttons .controls-button__container_disabled,.YORENOV-hud,.yorenov-prev-mn {
+      #app .window .window__buttons .controls-button__container_disabled {
         pointer-events: none;
       }
 
@@ -360,21 +356,20 @@ body #app .hud-radmir-info { display: none; }
 .Old-Fixed-Logo {
         position: absolute;
         top: 1vh;
-        right: 3.8222vh;
+        right: 5.8222vh;
         transform-origin: top right;
+            background-color: #000000cc;
+    border-radius: 13px;
+    height: 60px;
+    width: 210px;
       }
 .Old-Fixed-Logo img {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right;
-        width: 17.9259vh;
+        width: 15.9259vh;
         height: 3.5556vh;
-    background-color: #000000cc;
-    border-radius: 13px;
-    height: 60px;
-    width: 210px;
 }
-      }
 .Old-Fixed-Bonus{
        background: radial-gradient(93.1% 93.1% at 126.72% 6.9%, #eb00ff 0, #eb00ff00 100%), linear-gradient(129.39deg, #f5be09 30.88%, #e9651b 98.06%);
        width: 32px;
