@@ -250,8 +250,8 @@ body #app .hud-radmir-info { display: none; }
     margin-bottom: 3vh;
 }
 .Old-Fixed-Logo img {
-    width: 20.52vh;
-    height: 6.2vh;
+    width: 21.52vh;
+    height: 7.8vh;
     margin-right: 2vh;
 }
 .Old-Fixed-Bonus{
@@ -265,12 +265,12 @@ body #app .hud-radmir-info { display: none; }
        color: #fff;
        font-weight: 700;
        position: absolute;
-       bottom: 1vh;
-       right: 2.5vh;
+       bottom: 1.5vh;
+       right: 2vh;
        border-radius: 50%;
        font-family:"GothamPro Black Italic";
        font-style:italic;
-       font-size:1.39vh;
+       font-size:1.69vh;
       }
 .Old-Fixed-Main, .Old-Fixed-Cash, .Wanted_row {
     align-items: center;
@@ -1653,9 +1653,9 @@ body .authorization{background:0 0}#app .authorization{background-image:url("dat
             const serverWrapper = document.querySelector(".Old-Fixed-Logo img");
             if (serverWrapper) {
                 if (serverId <= 0) {
-                    serverWrapper.style.display = "flex";
+                    serverWrapper.style.display = "block";
                 } else {
-                    serverWrapper.style.display = "flex";
+                    serverWrapper.style.display = "block";
                     const serverLogo = oldRadmirConfig.logo[serverId];
                     if (serverLogo) {
                         serverWrapper.src = serverLogo;
