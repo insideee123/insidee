@@ -387,10 +387,7 @@ body #app .hud-radmir-info { display: none; }
        font-style:italic;
        font-size:1.39vh;
       }
-.Old-Fixed-Main {
-    margin-top: 2vh;
-    margin-right: 1vh;
-}
+
 .Old-Fixed-Weapon {
         position: absolute;
         top: 7.0vh;
