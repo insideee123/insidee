@@ -455,7 +455,7 @@ body #app .hud-radmir-info { display: none; }
 }
 .Old-Fixed-Params {
     height: 13vh;
-    right: 0.55vh; // от правой стенки
+    right: 5vh; // от правой стенки
     top: 11vh; // высота баров
     position: relative;
     z-index: 1;
@@ -463,9 +463,8 @@ body #app .hud-radmir-info { display: none; }
 
 .Old-Fixed-Cash {
                 position: absolute;
-        top: 10.0vh;
+        top: 12.0vh;
         right: 2.2667vh;
-        text-align: center;
     color: white;
     font-family: "GothamPro Black Italic";
     font-style: italic;
@@ -489,7 +488,7 @@ body #app .hud-radmir-info { display: none; }
         
 .Old-Fixed-Param {
         display: flex;
-        margin-bottom: 6px; // между баров
+        margin-bottom: 8px; // между баров
         align-items: center;
       }
 .Old-Fixed-Param.health {
@@ -502,7 +501,10 @@ body #app .hud-radmir-info { display: none; }
 }
   // под барами, ширина длина баров
         .Old-Param-Progress, .Old-Progress__Values {
-display: none;
+        width: 7.2037vh;
+        height: 1vh;
+        border-radius: 18px;
+        box-shadow: #000 0 0 0 .4167vh;
       }
 .Old-Progress__Values {
         opacity: 1;
@@ -576,6 +578,7 @@ display: none;
         position: absolute;
         right: 6.0vh;
         top: 29.2852vh;
+        margin-top: 1vh;
         text-align: center;
           background-color: #000000cc;
           border-radius: 18px;
